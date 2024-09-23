@@ -56,22 +56,34 @@ $(document).ready(function () {
     }
   });
   
-  // $('.popup-link').magnificPopup({
-  //   type: 'image',
-  //   mainClass: 'mfp-with-zoom', // this class is for CSS animation below
-  //   zoom: {
-  //     enabled: true, // By default it's false, so don't forget to enable it
-  //     duration: 700, // duration of the effect, in milliseconds
-  //     easing: 'ease-in-out', // CSS transition easing function
-  //     opener: function (openerElement) {
-  //       return openerElement.is('img') ? openerElement : openerElement.find('img');
-  //     }
+  // Предварительная загрузка картинок
+  //создаем JQuery функцию, которая будет подгружать изображения в буфер
+  // jQuery.preloadImages = function()
+  // {
+  //   for(var i = 0; i < arguments.length; i++)
+  //   {
+  //     jQuery("<img>").attr("src", arguments[ i ]);
   //   }
+  // };
+  // //указываем путь к изображению, которое нужно подгрузить
+  // $.preloadImages("/images/BIG/project-house003-image1.jpg");
+  
+  $('.popup-link').magnificPopup({
+    type: 'image',
+    mainClass: 'mfp-with-zoom', // this class is for CSS animation below
+    zoom: {
+      enabled: true, // By default it's false, so don't forget to enable it
+      duration: 700, // duration of the effect, in milliseconds
+      easing: 'ease-in-out', // CSS transition easing function
+      opener: function (openerElement) {
+        return openerElement.is('img') ? openerElement : openerElement.find('img');
+      }
+    }
     // callbacks: {
     //   open: function () {
     //   }
     // }
-  // });
+  });
   
   
 // Посмотреть ещё 3 проекта

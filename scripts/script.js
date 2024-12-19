@@ -5,7 +5,7 @@ let loader = $('.loader')
 $(document).ready(function () {
   
   //Блок 2 Наши проекты
-  
+
 // ! не работает
   // $('#image-popups').magnificPopup({
   //   delegate: 'a',
@@ -21,7 +21,7 @@ $(document).ready(function () {
   //   closeOnContentClick: true,
   //   midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
   // });
-
+  
   
   $('.image-popup-vertical-fit').magnificPopup({
     type: 'image',
@@ -30,9 +30,9 @@ $(document).ready(function () {
     image: {
       verticalFit: true
     }
-
+    
   });
-
+  
   $('.image-popup-fit-width').magnificPopup({
     type: 'image',
     closeOnContentClick: true,
@@ -40,7 +40,7 @@ $(document).ready(function () {
       verticalFit: false
     }
   });
-
+  
   $('.image-popup-no-margins').magnificPopup({
     type: 'image',
     closeOnContentClick: true,
@@ -68,7 +68,8 @@ $(document).ready(function () {
   // //указываем путь к изображению, которое нужно подгрузить
   // $.preloadImages("/images/BIG/project-house003-image1.jpg");
   
-  $('.popup-link').magnificPopup({
+  let popupLink = $('.popup-link');
+  popupLink.magnificPopup({
     type: 'image',
     mainClass: 'mfp-with-zoom', // this class is for CSS animation below
     zoom: {
@@ -84,23 +85,37 @@ $(document).ready(function () {
     //   }
     // }
   });
-  
-  
+
+
 // Посмотреть ещё 3 проекта
   $('.project-more').click(function () {
     let showMoreChevron = $('#showMoreChevron');
     let showMore = $('#showMore');
     let container3 = $('.container.container3');
+    let blockProjects = $('.projects');
+    // let container3 = $('.container3');
     container3.slideToggle(800, "linear");
-    container3.css('display', 'flex')
+    container3.css('display', 'none')
+    // console.log('window.visualViewport.width= '+window.visualViewport.width);
     if (isShowProjects) {
       isShowProjects = false;
+      // console.log("1= " + isShowProjects);
       showMore.html('Посмотреть ещё 3 проекта');
       showMoreChevron.toggleClass('fa-chevron-up fa-chevron-down');
     } else {
       isShowProjects = true;
+      // console.log("2= " + isShowProjects);
       showMore.html('Скрыть проекты');
+      container3.css('display', 'flex')
       showMoreChevron.toggleClass('fa-chevron-down fa-chevron-up');
+      if (window.visualViewport.width < 620) {
+        console.log("620= " + isShowProjects);
+        blockProjects.css('padding', '102px 0 10px 0');
+      }
+      if (window.visualViewport.width < 380) {
+        console.log("380= " + isShowProjects);
+        blockProjects.css('padding', '152px 0 780px 0');
+      }
     }
   });
 
@@ -135,6 +150,56 @@ $(document).ready(function () {
     });
   });
 
+//Блок 3 Технологии строительства
+  if (window.visualViewport.width > 620) {
+    console.log("visualViewport.width > 620");
+    
+    let guarantTitleTwo = $('.guarant-title-two');
+    guarantTitleTwo.css('display', 'none');
+    let guarant = $('#guarant');
+    guarant.html("Гарантии и условия оплаты")
+  } else {
+    // console.log('window.visualViewport.width= ' + window.visualViewport.width);
+    let technoItemCycle1 = $('.techno-item-cycle1');
+    // console.log("technoItemCycle1=" + technoItemCycle1);
+    technoItemCycle1.on('click', function () {
+      console.log("technoItemCycle1");
+    });
+    let technoItemCycle2 = $('.techno-item-cycle2');
+    // console.log("technoItemCycle1=" + technoItemCycle1);
+    technoItemCycle2.on('click', function () {
+      console.log("technoItemCycle2");
+    });
+    
+    let technoItemCycle3 = $('.techno-item-cycle3');
+    // console.log("technoItemCycle1=" + technoItemCycle1);
+    technoItemCycle3.on('click', function () {
+      console.log("technoItemCycle3= click");
+      
+      let technoItemHeader3 = $('.techno-item-desc3 .item-header');
+      console.log("techno-item-desc3= " + technoItemHeader3.html());
+      technoItemHeader3= technoItemHeader3.html();
+      console.log("techno-item-header3= " + technoItemHeader3);
+      
+      let technoItemHeader1 = $('#techno-item-header1');
+      console.log("начальное значение: techno-item-header1= " + technoItemHeader1.html());
+      technoItemHeader1.html(technoItemHeader3);
+      console.log("новое значение: techno-item-header1= " + technoItemHeader1.html());
+    });
+    
+    let technoItemCycle4 = $('.techno-item-cycle4');
+    // console.log("technoItemCycle1=" + technoItemCycle1);
+    technoItemCycle4.on('click', function () {
+      console.log("technoItemCycle4");
+    });
+    let technoItemCycle5 = $('.techno-item-cycle5');
+    // console.log("technoItemCycle1=" + technoItemCycle1);
+    technoItemCycle5.on('click', function () {
+      console.log("technoItemCycle5");
+    });
+  }
+
+  
 //Блок 5 Построили более 200 домов за 10 лет
   $(".slider").slick({
     slidesToShow: 3,
@@ -148,98 +213,35 @@ $(document).ready(function () {
     // appendArrows: '.card',
     // autoplay: true,
     // autoplaySpeed: 2000,
-    variableWidth: true
-    // beforeChange: function (slick, currentSlide, nextSlide) {
+    // adaptiveHeight: false,
+    variableWidth: true,
+    responsive: [{
+      breakpoint: 1025,
+      settings: {
+        slidesToShow: 2, // показывать по 2 слайда
+        slidesToScroll: 2, // скроллить по 2 слайда
+      }
+    }, {
+      breakpoint: 688,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      }
+    }]
+    // beforeChange: function (slick, currentSlide, nextSlide) {}
   });
-  
-  // let slideCur = $(".slick-current");
-  // if (slideCur) {
-  //   $(".slick-current .item-inner-desc").css('display', 'flex');
-  // }
-  
-  // let sliderActive = $('.slider').slickCurrentSlide();
-  // // let sliderActive = $('.slider').slickGetOption();
-  // console.log('sliderActive= ', sliderActive);
-  
-  
-  // $('.slick-next').click(function () {
-  // console.log('slideNext');
-  // $(".slick-current .item-inner-desc").css('display', 'flex');
-  // $('.slick').slick("slickSetOption", 'speed', 1, true)
-  // $('.slick').slick("slickNext")
-  // $('.slick').slick("slickSetOption", 'speed', 5000, true)
-  
-  //   slideCur = $(".slick-current");
-  //   if (slideCur) {
-  //     console.log('slideCur');
-  //     $(".slick-current .item-inner-desc").css('display', 'flex');
-  //   } else {
-  //     console.log('slideNext');
-  //   }
-  // });
-  //
-  //
-  // $(not(".slick-current,.item-inner-desc")).css('display', 'none');
-  
-  
-  // $(".slick-prev .item-inner-desc").css('display', 'none');
-  
-  
-  // $('.sld').slickPlay();
-  // let sliderActive = $('.sld').slickCurrentSlide();
-  // let sliderActive = $('.slider').slickGetOption();
-  // console.log('sliderActive= ', sliderActive);
-  
-  // Слайд активный (показывается)
-  // .slick-slide.slick-active{}
-  // Слайд основной
-  // .slick-slide.slick-current{}
-  
-  // Get the current slide
-  // let sliderActive = $('.slider').slick('slickCurrentSlide');
-  // let sliderActive = $('.slider .slick-active');
-  // let sliderActive = $('.slider');
-  // console.log('sliderActive= ' + sliderActive);
-  // let props = Object.getOwnPropertyNames(sliderActive);
-  // console.log('props=' + props);
-  
-  
-  // console.log(sliderActive[length]);
-  
-  
-  // Object.defineProperty(sliderActive, 'id', {
-  //   value: 42
-  // });
-  
-  // let propsKey = Object.keys(sliderActive);
-  // console.log('propsKey=' + propsKey);
-  
-  // const obj = { key1: 'value1', key2: 'value2' };
-  
-  // $('.SlickContainer').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-  //   var CurrentSlideDom=$(slick.$slides.get(currentSlide));
-  //   console.log('CurrentSlideDom= ' + CurrentSlideDom);
-  //   var NextSlideDom=$(slick.$slides.get(nextSlide));
-  // });
-  
-  // console.log('OBJsliderActive= ' + sliderActive.values(obj));
-  // console.log(sliderActive[0]);
-  // console.log(sliderActive[1]);
-  // console.log(sliderActive[2]);
-  // console.log(sliderActive['data-slick-index']);
-  
-  // let sliderCenter = $('.slider .slick-current');
-  // console.log('sliderCenter= ' + sliderCenter);
-  // if (currentSlide) {
-  //   console.log('currentSlide= ' + currentSlide);
-  // } else {
-  //   console.log('item-inner-desc= ' + currentSlide);
-  //   $(".item-inner-desc").css('display', 'none');
-  // }
+  if (window.visualViewport.width < 620) {
+    // console.log('window.visualViewport.width= '+window.visualViewport.width);
+    let itemInnerText11 = $('.item-inner-text11');
+    itemInnerText11.css('display', 'none');
+    let itemInnerText12 = $('.item-inner-text12');
+    itemInnerText12.css('display', 'block');
+  }
   
   
   let hasError = false;
 
+//Блок 7 Получите индивидуальную консультацию
 // Нужна консультация
 // согласие на обработку персональных данных
   let showConsultBox = $('.consult-assent-box');
@@ -258,11 +260,6 @@ $(document).ready(function () {
   document.querySelector('#inputPhoneConsult').onkeydown = function (e) {
     inputphone(e, document.querySelector('#inputPhoneConsult'))
   }
-//   $('#inputPhoneConsult').keydown(function ({
-//                                               inputphone(e, $('#inputPhoneConsult'))
-//
-// })
-// );
   
   
   function inputphone(e, phone) {
@@ -349,6 +346,11 @@ $(document).ready(function () {
           console.log(msg);
           loader.hide();
           showThank.css('margin', '120px');
+          if (window.visualViewport.width < 381) {
+            showThank.css('margin', '0');
+          } else {
+            showThank.css('margin', '120px');
+          }
           if (msg.success) {
             // alert('Спасибо за Ваш заказ. Мы скоро свяжемся с Вами!');
           } else {
@@ -364,7 +366,7 @@ $(document).ready(function () {
     }
   });
 
-
+//Блок 8 Запишитесь на экскурсию
 // Записаться на экскурсию
   let orderSubmit = $("#btn-signup");
   let showOrderExcur = $(".order-contacts");
@@ -490,13 +492,13 @@ $(document).ready(function () {
 //     if (isShowProjects) {
 //       isShowProjects = false;
 //       showMore.html('Посмотреть ещё 3 проекта');
-//// showMoreChevron.toggleClass('fa fa-chevron-up fa_custom fa-1x').toggleClass('fa fa-chevron-down fa_custom fa-1x');
+// // showMoreChevron.toggleClass('fa fa-chevron-up fa_custom fa-1x').toggleClass('fa fa-chevron-down fa_custom fa-1x');
 //       showMoreChevron.removeClass('fa fa-chevron-up fa_custom fa-1x');
 //       showMoreChevron.addClass('fa fa-chevron-down fa_custom fa-1x');
 //     } else {
 //       isShowProjects = true;
 //       showMore.html('Скрыть проекты');
-//// showMoreChevron.toggleClass('fa fa-chevron-down fa_custom fa-1x').toggleClass('fa fa-chevron-up fa_custom fa-1x');
+// // showMoreChevron.toggleClass('fa fa-chevron-down fa_custom fa-1x').toggleClass('fa fa-chevron-up fa_custom fa-1x');
 //       showMoreChevron.removeClass('fa fa-chevron-down fa_custom fa-1x');
 //       showMoreChevron.addClass('fa fa-chevron-up fa_custom fa-1x');
 //     }
@@ -508,7 +510,8 @@ $(document).ready(function () {
 // $('.project-more').click(function () {
 //   let showMoreChevron=$('#showMoreChevron');
 //   let showMore=$('#showMore');
-//   let container3=$('.container.container3');
+//   // let container3=$('.container.container3');
+//   let container3=$('.container3');
 //   if (isShowProjects){
 //     isShowProjects = false;
 //     showMore.html('Посмотреть ещё 3 проекта');

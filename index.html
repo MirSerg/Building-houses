@@ -16,7 +16,50 @@
 
 <section class="main">
 
+  <!--      всплывающее меню-->
+  <div class="menu-navicon" id="menu-navicon">
+    <div class="menu-navicon-ground">
+      <!--        ! какие вставить ссылки для перехода в инст? -->
+      <a href="#" class="cross" id="cross">
+        <img src="images/cross.png" alt="Крестик - закрыть меню">
+      </a>
+      <div class="menu-navicon-header">Меню</div>
+      <ul>
+        <li class="menu-item">
+          <a href="#projects">Каталог</a>
+        </li>
+        <li class="menu-item">
+          <a href="#technologies">Технологии</a>
+        </li>
+        <li class="menu-item">
+          <a href="#projects">Наши проекты</a>
+        </li>
+        <li class="menu-item">
+          <a href="#built">Производство</a>
+        </li>
+        <li class="menu-item">
+          <a href="#guarant">Гарантия</a>
+        </li>
+        <li class="menu-item">
+          <a href="#excursion">Отзывы</a>
+        </li>
+      </ul>
+      <div class="social">
+        <a href="#" class="logo-inst">
+          <img src="images/instagram.png" alt="Значок Инстаграмм">
+        </a>
+        <a href="#" class="logo-teleg">
+          <img src="images/telegram.png" alt="Значок Телеграмм">
+        </a>
+        <a href="#" class="logo-youtube">
+          <img src="images/youtube.png" alt="Значок Ютуб">
+        </a>
+      </div>
+    </div>
+  </div>
+
   <header class="header">
+
     <div class="container">
       <!--      меню - три линии-->
       <div class="menu-graph" id="menu-graph">
@@ -33,46 +76,6 @@
         </svg>
       </div>
 
-      <!--      всплывающее меню-->
-      <div class="menu-navicon" id="menu-navicon">
-        <div class="menu-navicon-ground">
-        </div>
-        <a href="#" class="cross" id="cross">
-          <img src="images/cross.png" alt="Крестик - закрыть меню">
-        </a>
-        <div class="menu-navicon-header">Меню</div>
-        <ul>
-          <li class="menu-item">
-            <a href="#projects">Каталог</a>
-          </li>
-          <li class="menu-item">
-            <a href="#technologies">Технологии</a>
-          </li>
-          <li class="menu-item">
-            <a href="#projects">Наши проекты</a>
-          </li>
-          <li class="menu-item">
-            <a href="#built">Производство</a>
-          </li>
-          <li class="menu-item">
-            <a href="#guarant">Гарантия</a>
-          </li>
-          <li class="menu-item">
-            <a href="#excursion">Отзывы</a>
-          </li>
-        </ul>
-        <div class="social">
-          <a href="#" class="logo-inst">
-            <img src="images/instagram.png" alt="Значок Инстаграмм">
-          </a>
-          <a href="#" class="logo-teleg">
-            <img src="images/telegram.png" alt="Значок Телеграмм">
-          </a>
-          <a href="#" class="logo-youtube">
-            <img src="images/youtube.png" alt="Значок Ютуб">
-          </a>
-        </div>
-      </div>
 
       <a href="#" class="logo">
         <img src="images/logo.png" alt="Логотип">
@@ -137,140 +140,163 @@
 <section class="projects">
   <h2 class="title" id="projects">Наши проекты</h2>
 
-  <!--  Modern house 003-->
   <div class="container">
-    <div class="project-block1">
-      <div class="project-gallery-items">
-        <div class="project-gallery-item project-gallery-big">
-          <img src="images/project-house003-image1.jpg" alt="Изображение дома">
-          <a href="images/project-house003-image1.jpg" class="image-popup-no-margins gallery-eye popup-link">
-            <img src="images/visibility.png" alt="Просмотр полного изображения">
+    <!--  Modern house 003-->
+    <div class="modern-house-003">
+      <h3 class="project-title project-title-block1">Modern house 003</h3>
+      <!--      <h3 class="project-title project-title-base">Modern house 003</h3>-->
+      <!--pictures-->
+      <div class="project-block1">
+        <div class="project-gallery-items">
+          <div class="project-gallery-item">
+            <!--          картинка в окне 707x531 -->
+            <div class="project-gallery-item-one">
+              <img src="images/project-house003-image1.jpg" class="project-gallery-big" alt="Изображение дома">
+              <!--          большая картинка - на весь экран-->
+              <a href="images/project-house003-image1.jpg"
+                 class="image-popup-no-margins gallery-eye popup-link">
+                <img src="images/visibility.png" alt="Просмотр полного изображения">
+              </a>
+            </div>
+          </div>
+          <div class="gallery-three">
+            <!--          три картинки - каждая в окне 220x147-->
+            <div class="project-gallery-item project-gallery-item-three">
+              <img src="images/project-house003-image2.jpg" class="project-gallery-big">
+              <!--                 style="display: block; width: 180px" alt="Изображение дома">-->
+              <!--            style="background-image: url('images/project-house003-image2.png')"-->
+              <a href="images/project-house003-image2.jpg"
+                 class="image-popup-no-margins gallery-eye popup-link">
+                <img src="images/visibility.png" alt="Просмотр полного изображения">
+              </a>
+            </div>
+            <div class="project-gallery-item project-gallery-item-three">
+              <img src="images/project-house003-image3.jpg" class="project-gallery-big">
+              <!--                 style="display: block; width: 180px" alt="Изображение дома">-->
+              <!--               style="background-image: url('images/project-house003-image3.png')">-->
+              <a href="images/project-house003-image3.jpg"
+                 class="image-popup-no-margins gallery-eye popup-link">
+                <img src="images/visibility.png" alt="Просмотр полного изображения">
+              </a>
+            </div>
+            <div class="project-gallery-item project-gallery-item-three">
+              <img src="images/project-house003-image4.jpg" class="project-gallery-big">
+              <!--                 style="display: block; width: 180px" alt="Изображение дома">-->
+              <!--               style="background-image: url('images/project-house003-image4.png')">-->
+              <a href="images/project-house003-image4.jpg"
+                 class="image-popup-no-margins gallery-eye popup-link">
+                <img src="images/visibility.png" alt="Просмотр полного изображения">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--text-->
+      <div class="project-block2">
+        <h3 class="project-title project-title-base">Modern house 003</h3>
+        <div class="project-text">
+          Этот проект представляет собой красивый и удобный одноэтажный дом с многоскатной кровлей, эркером и
+          камином на террасе. Его внешний традиционный архитектурный стиль прекрасно сочетается с современной практичной
+          планировкой интерьера.
+        </div>
+        <div class="project-advantages-items">
+          <div class="project-advantage">
+            <span class="project-advantage-item1">134 м<sup>2</sup></span>
+          </div>
+          <div class="project-advantage">
+            <span>4 спальни</span>
+          </div>
+          <div class="project-advantage">
+            <span>2 санузла</span>
+          </div>
+        </div>
+
+        <div class="project-action">
+          <a href="#consult">
+            <button class="btn hvr-glow">Получить консультацию</button>
           </a>
         </div>
-        <div class="gallery-three">
-          <div class="project-gallery-item">
-            <img src="images/project-house003-image2.jpg" alt="Изображение дома">
-            <!--               style="background-image: url('images/project-house003-image2.png')">-->
-            <a href="images/project-house003-image2.jpg" class="image-popup-no-margins gallery-eye">
-              <img src="images/visibility.png" alt="Просмотр полного изображения">
-            </a>
-          </div>
-          <div class="project-gallery-item">
-            <img src="images/project-house003-image3.jpg" alt="Изображение дома">
-            <!--               style="background-image: url('images/project-house003-image3.png')">-->
-            <a href="images/project-house003-image3.jpg" class="image-popup-no-margins gallery-eye">
-              <img src="images/visibility.png" alt="Просмотр полного изображения">
-            </a>
-          </div>
-          <div class="project-gallery-item">
-            <img src="images/project-house003-image4.jpg" alt="Изображение дома">
-            <!--               style="background-image: url('images/project-house003-image4.png')">-->
-            <a href="images/project-house003-image4.jpg" class="image-popup-no-margins gallery-eye">
-              <img src="images/visibility.png" alt="Просмотр полного изображения">
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="project-block2">
-      <h3 class="project-title">Modern house 003</h3>
-      <div class="project-text">
-        Этот проект представляет собой красивый и удобный одноэтажный дом с многоскатной кровлей, эркером и
-        камином на
-        террасе. Его внешний традиционный архитектурный стиль прекрасно сочетается с современной практичной
-        планировкой
-        интерьера.
-      </div>
-      <div class="project-advantages-items">
-        <div class="project-advantage">
-          <span>134 м<sup>2</sup></span>
-        </div>
-        <div class="project-advantage">
-          <span>4 спальни</span>
-        </div>
-        <div class="project-advantage">
-          <span>2 санузла</span>
-        </div>
-      </div>
-
-      <div class="project-action">
-        <a href="#consult">
-          <button class="btn hvr-glow">Получить консультацию</button>
-        </a>
-      </div>
-      <div class="project-action-download">
-        <a href="images/Proekt-1.PDF" download>
-          <button class="btn hvr-glow">Скачать PDF-план проекта (2,5 мб)</button>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!--  Modern house 004-->
-  <div class="container">
-    <div class="project-block2">
-      <h3 class="project-title">Modern house 004</h3>
-      <div class="project-text">
-        Компактный и функциональный дом подкупает простотой решений. Простая форма и двухскатная кровля
-        позволяет вести
-        строительство быстро и достаточно экономично. Комнаты сделаны максимально просторными за счет маленьких
-        технических и коммуникационных помещений.
-      </div>
-      <div class="project-advantages-items">
-        <div class="project-advantage">
-          <span>145 м<sup>2</sup></span>
-        </div>
-        <div class="project-advantage">
-          <span>3 спальни</span>
-        </div>
-        <div class="project-advantage">
-          <span>2 санузла</span>
-        </div>
-      </div>
-
-      <div class="project-action">
-        <a href="#consult">
-          <button class="btn hvr-glow">Получить консультацию</button>
-        </a>
-      </div>
-      <div class="project-action-download">
-        <a href="images/Proekt-2.pdf" download>
-          <button class="btn hvr-glow">Скачать PDF-план проекта (2,5 мб)</button>
-        </a>
-      </div>
-    </div>
-
-    <div class="project-block1">
-      <div class="project-gallery-items">
-        <div class="project-gallery-item project-gallery-big">
-          <img src="images/project-house004-image1.jpg" alt="Изображение дома">
-          <!--             style="background-image: url('images/project-house004-image1.png')">-->
-          <a href="images/BIG/project-house004-image1.jpg" id="image-popups" class="image-popup-no-margins gallery-eye">
-            <img src="images/visibility.png" alt="Просмотр полного изображения">
+        <div class="project-action-download">
+          <a href="images/Proekt-1.PDF" download>
+            <button class="btn hvr-glow">Скачать PDF-план проекта (2,5 мб)</button>
           </a>
         </div>
-        <div class="gallery-three">
-          <div class="project-gallery-item">
-            <img src="images/project-house004-image2.jpg" alt="Изображение дома">
-            <!--               style="background-image: url('images/project-house004-image2.png')">-->
-            <a href="images/BIG/project-house004-image2.jpg" class="image-popup-no-margins gallery-eye">
-              <img src="images/visibility.png" alt="Просмотр полного изображения">
-            </a>
+      </div>
+    </div>
+
+    <!--  Modern house 004-->
+    <div class="modern-house-004">
+      <h3 class="project-title project-title-block1">Modern house 004</h3>
+      <!--text-->
+      <div class="project-block2">
+        <h3 class="project-title project-title-base">Modern house 004</h3>
+        <div class="project-text">
+          Компактный и функциональный дом подкупает простотой решений. Простая форма и двухскатная кровля
+          позволяет вести
+          строительство быстро и достаточно экономично. Комнаты сделаны максимально просторными за счет маленьких
+          технических и коммуникационных помещений.
+        </div>
+        <div class="project-advantages-items">
+          <div class="project-advantage">
+            <span class="project-advantage-item1">145 м<sup>2</sup></span>
           </div>
-          <div class="project-gallery-item">
-            <img src="images/project-house004-image3.jpg" alt="Изображение дома">
-            <!--               style="background-image: url('images/project-house004-image3.png')">-->
-            <a href="images/BIG/project-house004-image3.jpg" class="image-popup-no-margins gallery-eye">
-              <img src="images/visibility.png" alt="Просмотр полного изображения">
-            </a>
+          <div class="project-advantage">
+            <span>3 спальни</span>
           </div>
+          <div class="project-advantage">
+            <span>2 санузла</span>
+          </div>
+        </div>
+
+        <div class="project-action">
+          <a href="#consult">
+            <button class="btn hvr-glow">Получить консультацию</button>
+          </a>
+        </div>
+        <div class="project-action-download">
+          <a href="images/Proekt-2.pdf" download>
+            <button class="btn hvr-glow">Скачать PDF-план проекта (2,5 мб)</button>
+          </a>
+        </div>
+      </div>
+      <!--pictures-->
+      <div class="project-block1">
+        <div class="project-gallery-items">
           <div class="project-gallery-item">
-            <img src="images/project-house004-image4.jpg" alt="Изображение дома">
-            <!--               style="background-image: url('images/project-house004-image4.png')">-->
-            <a href="images/BIG/project-house004-image4.jpg" class="image-popup-no-margins gallery-eye">
-              <img src="images/visibility.png" alt="Просмотр полного изображения">
-            </a>
+            <div class="project-gallery-item-one">
+              <img src="images/project-house004-image1.jpg" class="project-gallery-big" alt="Изображение дома">
+              <!--             style="background-image: url('images/project-house004-image1.png')">-->
+              <a href="images/project-house004-image1.jpg" id="image-popups"
+                 class="image-popup-no-margins gallery-eye popup-link">
+                <img src="images/visibility.png" alt="Просмотр полного изображения">
+              </a>
+            </div>
+          </div>
+          <div class="gallery-three">
+            <div class="project-gallery-item project-gallery-item-three">
+              <img src="images/project-house004-image2.jpg" class="project-gallery-big" alt="Изображение дома">
+              <!--               style="background-image: url('images/project-house004-image2.png')">-->
+              <a href="images/project-house004-image2.jpg"
+                 class="image-popup-no-margins gallery-eye popup-link">
+                <img src="images/visibility.png" alt="Просмотр полного изображения">
+              </a>
+            </div>
+            <div class="project-gallery-item project-gallery-item-three">
+              <img src="images/project-house004-image3.jpg" class="project-gallery-big" alt="Изображение дома">
+              <!--               style="background-image: url('images/project-house004-image3.png')">-->
+              <a href="images/project-house004-image3.jpg"
+                 class="image-popup-no-margins gallery-eye popup-link">
+                <img src="images/visibility.png" alt="Просмотр полного изображения">
+              </a>
+            </div>
+            <div class="project-gallery-item project-gallery-item-three">
+              <img src="images/project-house004-image4.jpg" class="project-gallery-big" alt="Изображение дома">
+              <!--               style="background-image: url('images/project-house004-image4.png')">-->
+              <a href="images/project-house004-image4.jpg"
+                 class="image-popup-no-margins gallery-eye popup-link">
+                <img src="images/visibility.png" alt="Просмотр полного изображения">
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -288,130 +314,148 @@
 
   <!--  Modern house 005-->
   <div class="container container3">
-    <div class="project-block1">
-      <div class="project-gallery-items">
-        <div class="project-gallery-item project-gallery-big">
-          <img src="images/project-house005-image1.jpg" alt="Изображение дома">
-          <a href="images/BIG/project-house005-image1.jpg" class="image-popup-no-margins gallery-eye">
-            <img src="images/visibility.png" alt="Просмотр полного изображения">
+    <div class="modern-house-005">
+      <h3 class="project-title project-title-block1">Modern house 005</h3>
+      <!--pictures-->
+      <div class="project-block1">
+        <div class="project-gallery-items">
+          <div class="project-gallery-item-one">
+            <div class="project-gallery-item">
+              <img src="images/project-house005-image1.jpg" class="project-gallery-big" alt="Изображение дома">
+              <a href="images/project-house005-image1.jpg"
+                 class="image-popup-no-margins gallery-eye popup-link">
+                <img src="images/visibility.png" alt="Просмотр полного изображения">
+              </a>
+            </div>
+          </div>
+          <div class="gallery-three">
+            <div class="project-gallery-item project-gallery-item-three">
+              <img src="images/project-house005-image2.jpg" class="project-gallery-big" alt="Изображение дома">
+              <a href="images/project-house005-image2.jpg"
+                 class="image-popup-no-margins gallery-eye popup-link">
+                <img src="images/visibility.png" alt="Просмотр полного изображения">
+              </a>
+            </div>
+            <div class="project-gallery-item project-gallery-item-three">
+              <img src="images/project-house005-image3.jpg" class="project-gallery-big" alt="Изображение дома">
+              <a href="images/project-house005-image3.jpg"
+                 class="image-popup-no-margins gallery-eye popup-link">
+                <img src="images/visibility.png" alt="Просмотр полного изображения">
+              </a>
+            </div>
+            <div class="project-gallery-item project-gallery-item-three">
+              <img src="images/project-house005-image4.jpg" class="project-gallery-big" alt="Изображение дома">
+              <a href="images/project-house005-image4.jpg"
+                 class="image-popup-no-margins gallery-eye popup-link">
+                <img src="images/visibility.png" alt="Просмотр полного изображения">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--text-->
+      <div class="project-block2">
+        <h3 class="project-title project-title-base">Modern house 005</h3>
+        <div class="project-text">
+          Проект (MH-005) представляет собой красивый и удобный одноэтажный дом с двускатной кровлей, эркером и
+          террасой. Его внешний традиционный архитектурный стиль прекрасно сочетается с современной практичной
+          планировкой интерьера.
+        </div>
+        <div class="project-advantages-items">
+          <div class="project-advantage">
+            <span class="project-advantage-item1">158 м<sup>2</sup></span>
+          </div>
+          <div class="project-advantage">
+            <span>4 спальни</span>
+          </div>
+          <div class="project-advantage">
+            <span>3 санузла</span>
+          </div>
+        </div>
+
+        <div class="project-action">
+          <a href="#consult">
+            <button class="btn hvr-glow">Получить консультацию</button>
           </a>
         </div>
-        <div class="gallery-three">
-          <div class="project-gallery-item">
-            <img src="images/project-house005-image2.jpg" alt="Изображение дома">
-            <a href="images/BIG/project-house005-image2.jpg" class="image-popup-no-margins gallery-eye">
-              <img src="images/visibility.png" alt="Просмотр полного изображения">
-            </a>
-          </div>
-          <div class="project-gallery-item">
-            <img src="images/project-house005-image3.jpg" alt="Изображение дома">
-            <a href="images/BIG/project-house005-image3.jpg" class="image-popup-no-margins gallery-eye">
-              <img src="images/visibility.png" alt="Просмотр полного изображения">
-            </a>
-          </div>
-          <div class="project-gallery-item">
-            <img src="images/project-house005-image4.jpg" alt="Изображение дома">
-            <a href="images/BIG/project-house005-image4.jpg" class="image-popup-no-margins gallery-eye">
-              <img src="images/visibility.png" alt="Просмотр полного изображения">
-            </a>
-          </div>
+        <div class="project-action-download">
+          <a href="images/Proekt-3.pdf" download>
+            <button class="btn hvr-glow">Скачать PDF-план проекта (2,5 мб)</button>
+          </a>
         </div>
-      </div>
-    </div>
-
-    <div class="project-block2">
-      <h3 class="project-title">Modern house 005</h3>
-      <div class="project-text">
-        Проект представляет собой красивый и удобный одноэтажный дом с двускатной кровлей, эркером и
-        террасой. Его внешний традиционный архитектурный стиль прекрасно сочетается с современной практичной
-        планировкой
-        интерьера.
-      </div>
-      <div class="project-advantages-items">
-        <div class="project-advantage">
-          <span>158 м<sup>2</sup></span>
-        </div>
-        <div class="project-advantage">
-          <span>3 спальни</span>
-        </div>
-        <div class="project-advantage">
-          <span>2 санузла</span>
-        </div>
-      </div>
-
-      <div class="project-action">
-        <a href="#consult">
-          <button class="btn hvr-glow">Получить консультацию</button>
-        </a>
-      </div>
-      <div class="project-action-download">
-        <a href="images/Proekt-3.pdf" download>
-          <button class="btn hvr-glow">Скачать PDF-план проекта (2,5 мб)</button>
-        </a>
       </div>
     </div>
   </div>
 
   <!--  Modern house 006-->
   <div class="container container3">
-    <div class="project-block2">
-      <h3 class="project-title">Modern house 006</h3>
-      <div class="project-text">
-        Проект представляет собой красивый и удобный одноэтажный дом с двускатной кровлей, эркером и
-        террасой. Его внешний традиционный архитектурный стиль прекрасно сочетается с современной практичной
-        планировкой
-        интерьера.
-      </div>
-      <div class="project-advantages-items">
-        <div class="project-advantage">
-          <span>137 м<sup>2</sup></span>
+    <div class="modern-house-006">
+      <h3 class="project-title project-title-block1">Modern house 006</h3>
+      <!--text-->
+      <div class="project-block2">
+        <h3 class="project-title project-title-base">Modern house 006</h3>
+        <div class="project-text">
+          Проект (MH-006). Здание представляет собой комфортный одноэтажный дом с трехкатной кровлей, эркером и
+          террасой. Его внешний традиционный архитектурный стиль прекрасно сочетается с современной практичной
+          планировкой интерьера.
         </div>
-        <div class="project-advantage">
-          <span>3 спальни</span>
+        <div class="project-advantages-items">
+          <div class="project-advantage">
+            <span class="project-advantage-item1">137 м<sup>2</sup></span>
+          </div>
+          <div class="project-advantage">
+            <span>3 спальни</span>
+          </div>
+          <div class="project-advantage">
+            <span>2 санузла</span>
+          </div>
         </div>
-        <div class="project-advantage">
-          <span>2 санузла</span>
-        </div>
-      </div>
 
-      <div class="project-action">
-        <a href="#consult">
-          <button class="btn hvr-glow">Получить консультацию</button>
-        </a>
-      </div>
-      <div class="project-action-download">
-        <a href="images/Proekt-4.PDF" download>
-          <button class="btn hvr-glow">Скачать PDF-план проекта (2,5 мб)</button>
-        </a>
-      </div>
-    </div>
-
-    <div class="project-block1">
-      <div class="project-gallery-items">
-        <div class="project-gallery-item project-gallery-big">
-          <img src="images/project-house006-image1.jpg" alt="Изображение дома">
-          <a href="images/BIG/project-house006-image1.jpg" class="image-popup-no-margins gallery-eye">
-            <img src="images/visibility.png" alt="Просмотр полного изображения">
+        <div class="project-action">
+          <a href="#consult">
+            <button class="btn hvr-glow">Получить консультацию</button>
           </a>
         </div>
-        <div class="gallery-three">
-          <div class="project-gallery-item">
-            <img src="images/project-house006-image2.jpg" alt="Изображение дома">
-            <a href="images/BIG/project-house006-image2.jpg" class="image-popup-no-margins gallery-eye">
-              <img src="images/visibility.png" alt="Просмотр полного изображения">
-            </a>
+        <div class="project-action-download">
+          <a href="images/Proekt-4.PDF" download>
+            <button class="btn hvr-glow">Скачать PDF-план проекта (2,5 мб)</button>
+          </a>
+        </div>
+      </div>
+      <!--pictures-->
+      <div class="project-block1">
+        <div class="project-gallery-items">
+          <div class="project-gallery-item-one">
+            <div class="project-gallery-item">
+              <img src="images/project-house006-image1.jpg" class="project-gallery-big" alt="Изображение дома">
+              <a href="images/project-house006-image1.jpg"
+                 class="image-popup-no-margins gallery-eye popup-link">
+                <img src="images/visibility.png" alt="Просмотр полного изображения">
+              </a>
+            </div>
           </div>
-          <div class="project-gallery-item">
-            <img src="images/project-house006-image3.jpg" alt="Изображение дома">
-            <a href="images/BIG/project-house006-image3.jpg" class="image-popup-no-margins gallery-eye">
-              <img src="images/visibility.png" alt="Просмотр полного изображения">
-            </a>
-          </div>
-          <div class="project-gallery-item">
-            <img src="images/project-house006-image4.jpg" alt="Изображение дома">
-            <a href="images/BIG/project-house006-image4.jpg" class="image-popup-no-margins gallery-eye">
-              <img src="images/visibility.png" alt="Просмотр полного изображения">
-            </a>
+          <div class="gallery-three">
+            <div class="project-gallery-item project-gallery-item-three">
+              <img src="images/project-house006-image2.jpg" class="project-gallery-big" alt="Изображение дома">
+              <a href="images/project-house006-image2.jpg"
+                 class="image-popup-no-margins gallery-eye popup-link">
+                <img src="images/visibility.png" alt="Просмотр полного изображения">
+              </a>
+            </div>
+            <div class="project-gallery-item project-gallery-item-three">
+              <img src="images/project-house006-image3.jpg" class="project-gallery-big" alt="Изображение дома">
+              <a href="images/project-house006-image3.jpg"
+                 class="image-popup-no-margins gallery-eye popup-link">
+                <img src="images/visibility.png" alt="Просмотр полного изображения">
+              </a>
+            </div>
+            <div class="project-gallery-item project-gallery-item-three">
+              <img src="images/project-house006-image4.jpg" class="project-gallery-big" alt="Изображение дома">
+              <a href="images/project-house006-image4.jpg"
+                 class="image-popup-no-margins gallery-eye popup-link">
+                <img src="images/visibility.png" alt="Просмотр полного изображения">
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -420,66 +464,75 @@
 
   <!--  Modern house 007-->
   <div class="container container3">
-    <div class="project-block1">
-      <div class="project-gallery-items">
-        <div class="project-gallery-item project-gallery-big">
-          <img src="images/project-house007-image1.jpg" alt="Изображение дома">
-          <a href="images/BIG/project-house007-image1.jpg" class="image-popup-no-margins gallery-eye">
-            <img src="images/visibility.png" alt="Просмотр полного изображения">
+    <div class="modern-house-007">
+      <h3 class="project-title project-title-block1">Modern house 007</h3>
+      <!--pictures-->
+      <div class="project-block1">
+        <div class="project-gallery-items">
+          <div class="project-gallery-item-one">
+            <div class="project-gallery-item">
+              <img src="images/project-house007-image1.jpg" class="project-gallery-big" alt="Изображение дома">
+              <a href="images/project-house007-image1.jpg"
+                 class="image-popup-no-margins gallery-eye popup-link">
+                <img src="images/visibility.png" alt="Просмотр полного изображения">
+              </a>
+            </div>
+          </div>
+          <div class="gallery-three">
+            <div class="project-gallery-item project-gallery-item-three">
+              <img src="images/project-house007-image2.jpg" class="project-gallery-big" alt="Изображение дома">
+              <a href="images/project-house007-image2.jpg"
+                 class="image-popup-no-margins gallery-eye popup-link">
+                <img src="images/visibility.png" alt="Просмотр полного изображения">
+              </a>
+            </div>
+            <div class="project-gallery-item project-gallery-item-three">
+              <img src="images/project-house007-image3.jpg" class="project-gallery-big" alt="Изображение дома">
+              <a href="images/project-house007-image3.jpg"
+                 class="image-popup-no-margins gallery-eye popup-link">
+                <img src="images/visibility.png" alt="Просмотр полного изображения">
+              </a>
+            </div>
+            <div class="project-gallery-item project-gallery-item-three">
+              <img src="images/project-house007-image4.jpg" class="project-gallery-big" alt="Изображение дома">
+              <a href="images/project-house007-image4.jpg"
+                 class="image-popup-no-margins gallery-eye popup-link">
+                <img src="images/visibility.png" alt="Просмотр полного изображения">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--text-->
+      <div class="project-block2 project-block-last">
+        <h3 class="project-title project-title-base">Modern house 007</h3>
+        <div class="project-text">
+          Проект (MH-007). Красивый и удобный одноэтажный дом с двускатной кровлей, эркером и
+          террасой. Его внешний традиционный архитектурный стиль прекрасно сочетается с современной практичной
+          планировкой интерьера.
+        </div>
+        <div class="project-advantages-items">
+          <div class="project-advantage">
+            <span class="project-advantage-item1">143 м<sup>2</sup></span>
+          </div>
+          <div class="project-advantage">
+            <span>2 спальни</span>
+          </div>
+          <div class="project-advantage">
+            <span>2 санузла</span>
+          </div>
+        </div>
+
+        <div class="project-action">
+          <a href="#consult">
+            <button class="btn hvr-glow">Получить консультацию</button>
           </a>
         </div>
-        <div class="gallery-three">
-          <div class="project-gallery-item">
-            <img src="images/project-house007-image2.jpg" alt="Изображение дома">
-            <a href="images/BIG/project-house007-image2.jpg" class="image-popup-no-margins gallery-eye">
-              <img src="images/visibility.png" alt="Просмотр полного изображения">
-            </a>
-          </div>
-          <div class="project-gallery-item">
-            <img src="images/project-house007-image3.jpg" alt="Изображение дома">
-            <a href="images/BIG/project-house007-image3.jpg" class="image-popup-no-margins gallery-eye">
-              <img src="images/visibility.png" alt="Просмотр полного изображения">
-            </a>
-          </div>
-          <div class="project-gallery-item">
-            <img src="images/project-house007-image4.jpg" alt="Изображение дома">
-            <a href="images/BIG/project-house007-image4.jpg" class="image-popup-no-margins gallery-eye">
-              <img src="images/visibility.png" alt="Просмотр полного изображения">
-            </a>
-          </div>
+        <div class="project-action-download">
+          <a href="images/Proekt-5.PDF" download>
+            <button class="btn hvr-glow">Скачать PDF-план проекта (2,5 мб)</button>
+          </a>
         </div>
-      </div>
-    </div>
-
-    <div class="project-block2 project-block-last">
-      <h3 class="project-title">Modern house 007</h3>
-      <div class="project-text">
-        Проект представляет собой красивый и удобный одноэтажный дом с двускатной кровлей, эркером и
-        террасой. Его внешний традиционный архитектурный стиль прекрасно сочетается с современной практичной
-        планировкой
-        интерьера.
-      </div>
-      <div class="project-advantages-items">
-        <div class="project-advantage">
-          <span>143 м<sup>2</sup></span>
-        </div>
-        <div class="project-advantage">
-          <span>3 спальни</span>
-        </div>
-        <div class="project-advantage">
-          <span>2 санузла</span>
-        </div>
-      </div>
-
-      <div class="project-action">
-        <a href="#consult">
-          <button class="btn hvr-glow">Получить консультацию</button>
-        </a>
-      </div>
-      <div class="project-action-download">
-        <a href="images/Proekt-5.PDF" download>
-          <button class="btn hvr-glow">Скачать PDF-план проекта (2,5 мб)</button>
-        </a>
       </div>
     </div>
   </div>
@@ -495,21 +548,33 @@
     <div class="techno-items">
       <div class="techno-item1">
         <div class="techno-item">
-          <div class="techno-item-image techno-item-image1">
-            <img src="./images/pointer1.png" alt="Указатель">
+          <!--          <div class="techno-item-image techno-item-image1">-->
+          <!--            <img src="./images/pointer1.png" alt="Указатель">-->
+          <!--          </div>-->
+          <div class="techno-item-line1"></div>
+          <div class="techno-item-line2"></div>
+          <div class="techno-item-cycle techno-item-cycle1">
+            <div class="techno-item-ball"></div>
           </div>
           <div class="techno-item-desc techno-item-desc1">
-            <div class="item-header">Неразрывный каркас</div>
+            <div class="item-header" id="techno-item-header1">Неразрывный каркас</div>
             <div class="item-text techno-item-text">
               Монтаж стен этажей внутри дома и по всему периметру выполняется единым массивом
             </div>
           </div>
         </div>
       </div>
+
       <div class="techno-item2">
         <div class="techno-item">
-          <div class="techno-item-image techno-item-image2">
-            <img src="./images/pointer2.png" alt="Указатель">
+          <!--          <div class="techno-item-image techno-item-image2">-->
+          <!--            <img src="./images/pointer2.png" alt="Указатель">-->
+          <!--          </div>-->
+
+          <div class="techno-item-line1"></div>
+          <div class="techno-item-line2"></div>
+          <div class="techno-item-cycle techno-item-cycle2">
+            <div class="techno-item-ball"></div>
           </div>
           <div class="techno-item-desc techno-item-desc2">
             <div class="item-header">5 камерные окна</div>
@@ -518,11 +583,26 @@
             </div>
           </div>
         </div>
+
+
+        <!--        &lt;!&ndash;        <div class="techno-item-adaptive">&ndash;&gt;-->
+        <!--        &lt;!&ndash;          <div class="techno-item-cycle">&ndash;&gt;-->
+        <!--        &lt;!&ndash;            <div class="techno-item-ball"></div>&ndash;&gt;-->
+        <!--        &lt;!&ndash;          </div>&ndash;&gt;-->
+        <!--        &lt;!&ndash;        </div>&ndash;&gt;-->
+
+
       </div>
+
       <div class="techno-item3">
         <div class="techno-item">
-          <div class="techno-item-image techno-item-image3">
-            <img src="./images/pointer3.png" alt="Указатель">
+          <!--          <div class="techno-item-image techno-item-image3">-->
+          <!--            <img src="./images/pointer3.png" alt="Указатель">-->
+          <!--          </div>-->
+          <div class="techno-item-line1"></div>
+          <div class="techno-item-line2"></div>
+          <div class="techno-item-cycle techno-item-cycle3">
+            <div class="techno-item-ball"></div>
           </div>
           <div class="techno-item-desc techno-item-desc3">
             <div class="item-header">Диагональный раскос</div>
@@ -534,10 +614,16 @@
           </div>
         </div>
       </div>
+
       <div class="techno-item4">
         <div class="techno-item">
-          <div class="techno-item-image techno-item-image4">
-            <img src="./images/pointer4.png" alt="Указатель">
+          <!--          <div class="techno-item-image techno-item-image4">-->
+          <!--            <img src="./images/pointer4.png" alt="Указатель">-->
+          <!--          </div>-->
+          <div class="techno-item-line1"></div>
+          <div class="techno-item-line2"></div>
+          <div class="techno-item-cycle techno-item-cycle4">
+            <div class="techno-item-ball"></div>
           </div>
           <div class="techno-item-desc techno-item-desc4">
             <div class="item-header">Плитная ветрозащита</div>
@@ -547,41 +633,94 @@
           </div>
         </div>
       </div>
+
       <div class="techno-item5">
         <div class="techno-item">
-          <div class="techno-item-image techno-item-image5">
-            <img src="./images/pointer5.png" alt="Указатель">
+          <!--          <div class="techno-item-image techno-item-image5">-->
+          <!--            <img src="./images/pointer5.png" alt="Указатель">-->
+          <!--          </div>-->
+          <div class="techno-item-line1"></div>
+          <div class="techno-item-line2"></div>
+          <div class="techno-item-cycle techno-item-cycle5">
+            <div class="techno-item-ball"></div>
           </div>
           <div class="techno-item-desc techno-item-desc5">
             <div class="item-header">Сборка силовых узлов</div>
             <div class="item-text techno-item-text">
               Основные силовые узлы наших домов оцинкованы, что позволяет быть уверенными в исключительной
-              прочности и
-              долговечности конструкции
+              прочности и долговечности конструкции
             </div>
           </div>
         </div>
       </div>
+
     </div>
 
+    <!--    grid - используется на адаптиве-->
+    <div class="techno-grid">
+      <div class="techno-grid-item techno-item-active">
+        <div class="techno-square"></div>
+        <div class="item-header">
+          Неразрывный каркас
+        </div>
+        <div class="item-text techno-item-text">
+          Монтаж стен этажей внутри дома и по всему периметру выполняется единым массивом
+        </div>
+      </div>
+      <div class="techno-grid-item">
+        <div class="item-header">
+          5 камерные окна
+        </div>
+        <div class="item-text techno-item-text">
+          Обеспечивает исключительную сохранность тепла в доме
+        </div>
+      </div>
+      <div class="techno-grid-item">
+        <div class="item-header">
+          Диагональный раскос
+        </div>
+        <div class="item-text techno-item-text">
+          Система диагональных раскосов позволяет создать оптимальный вентиляционный зазор для капитальных стен и
+          наружной отделки
+        </div>
+      </div>
+      <div class="techno-grid-item">
+        <div class="item-header">
+          Плитная ветрозащита
+        </div>
+        <div class="item-text techno-item-text">
+          Используемая влагостойкая ветрозащитная плита обеспечивает дополнительную шумоизоляцию стен
+        </div>
+      </div>
+      <div class="techno-grid-item">
+        <div class="item-header">
+          Сборка силовых узлов
+        </div>
+        <div class="item-text techno-item-text">
+          Основные силовые узлы наших домов оцинкованы, что позволяет быть уверенными в исключительной прочности и
+          долговечности конструкции
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
 <section class="six-steps">
   <h2 class="title">6 шагов к вашему новому дому</h2>
-  <div class="container">
+  <div class="container container-six-steps">
     <div class="steps-items">
       <div class="steps-item">
         <span class="steps-item-nmb">01</span>
         <div class="steps-item-image">
           <img src="images/step-image-chat.png" alt="Значок чат">
         </div>
-        <div class="steps-item-desc">
+        <div class="steps-item-desc steps-item-desc-01">
           <div class="item-header">
             Заявка на сайте
           </div>
           <div class="item-text">
-            Вы оставляете заявку на сайте, или звоните нам +380 (96) 73-67-281
+            Вы <a href="#consult"> <span class="item-text-under">оставляете заявку</span></a> на сайте, или
+            звоните нам +380 (96) 73-67-281
           </div>
         </div>
       </div>
@@ -590,7 +729,7 @@
         <div class="steps-item-image">
           <img src="images/step-image-phone.png" alt="Значок телефон">
         </div>
-        <div class="steps-item-desc">
+        <div class="steps-item-desc steps-item-desc-02">
           <div class="item-header">
             Звонок менеджера
           </div>
@@ -604,7 +743,7 @@
         <div class="steps-item-image">
           <img src="images/step-image-conference.png" alt="Значок встреча">
         </div>
-        <div class="steps-item-desc">
+        <div class="steps-item-desc steps-item-desc-03">
           <div class="item-header">
             Встреча
           </div>
@@ -618,7 +757,7 @@
         <div class="steps-item-image">
           <img src="images/step-image-contract.png" alt="Значок договор">
         </div>
-        <div class="steps-item-desc">
+        <div class="steps-item-desc steps-item-desc-04">
           <div class="item-header">
             Договор
           </div>
@@ -632,7 +771,7 @@
         <div class="steps-item-image">
           <img src="images/step-image-technics.png" alt="Значок строительство">
         </div>
-        <div class="steps-item-desc">
+        <div class="steps-item-desc steps-item-desc-02">
           <div class="item-header">
             Строительство
           </div>
@@ -646,7 +785,7 @@
         <div class="steps-item-image">
           <img src="images/step-image-house.png" alt="Значок ваш дом">
         </div>
-        <div class="steps-item-desc">
+        <div class="steps-item-desc steps-item-desc-06">
           <div class="item-header">
             Ваш дом
           </div>
@@ -672,17 +811,21 @@
             <div class="item-inner-desc">
               <div class="item-inner-text item-inner-text1">
                 <h4>Modern house 006</h4>
-                <p>Киевская обл., г. Борова, 25</p>
+                <!--                <p>Киевская обл.,<br>г. Борова, 25</p>-->
+                <p class="item-inner-text11">Киевская обл., г. Борова, 25</p>
+                <p class="item-inner-text12">Киевская обл.,</p>
+                <p class="item-inner-text12">г. Борова, 25</p>
               </div>
               <div class="item-inner-line"></div>
               <div class="item-inner-text item-inner-text2">
                 <div class="item-inner-text2-2">
-                  <h4>Габариты:</h4>
+                  <h4 class="built-houses-h4">Габариты:</h4>
                   <p>10,4 м Х 9,5 м</p>
                 </div>
+                <!--                <div><br></div>-->
                 <div class="item-inner-text2-2">
-                  <h4>Площадь:</h4>
-                  <p class="item-inner-text2-m2">162,8 м<sup>2</sup></p>
+                  <h4 class="built-houses-h4">Площадь:</h4>
+                  <p class="item-inner-text2-m2">154 м<sup>2</sup></p>
                 </div>
               </div>
             </div>
@@ -690,20 +833,25 @@
         </div>
         <div class="item item4">
           <div class="item-inner">
-            <img src="images/project-house004-image1.png" alt="Дом">
+            <!--            <img src="images/project-house004-image1.png" alt="Дом">-->
+            <img src="images/slider-photo2.png" alt="Дом">
+
             <div class="item-inner-desc">
               <div class="item-inner-text item-inner-text1">
                 <h4>Modern house 004</h4>
-                <p>Московская обл., г. Балашиха, 15</p>
+                <p class="item-inner-text11">Московская обл., г. Балашиха, 15</p>
+                <p class="item-inner-text12">Московская обл.,</p>
+                <p class="item-inner-text12">г. Балашиха, 15</p>
               </div>
               <div class="item-inner-line"></div>
               <div class="item-inner-text item-inner-text2">
                 <div class="item-inner-text2-2">
-                  <h4>Габариты:</h4>
+                  <h4 class="built-houses-h4">Габариты:</h4>
                   <p>11,1 м Х 10,5 м</p>
                 </div>
+                <!--                <div><br></div>-->
                 <div class="item-inner-text2-2">
-                  <h4>Площадь:</h4>
+                  <h4 class="built-houses-h4">Площадь:</h4>
                   <p class="item-inner-text2-m2">157,7 м<sup>2</sup></p>
                 </div>
               </div>
@@ -712,20 +860,23 @@
         </div>
         <div class="item item5">
           <div class="item-inner">
-            <img src="images/project-house005-image1.png" alt="Дом">
+            <img src="images/slider-photo3.png" alt="Дом">
             <div class="item-inner-desc">
               <div class="item-inner-text item-inner-text1">
                 <h4>Modern house 005</h4>
-                <p>Амурская обл., г. Свободный, 23</p>
+                <p class="item-inner-text11">Амурская обл., г. Свободный, 23</p>
+                <p class="item-inner-text12">Амурская обл.,</p>
+                <p class="item-inner-text12">г. Свободный, 23</p>
               </div>
               <div class="item-inner-line"></div>
               <div class="item-inner-text item-inner-text2">
                 <div class="item-inner-text2-2">
-                  <h4>Габариты:</h4>
+                  <h4 class="built-houses-h4">Габариты:</h4>
                   <p>11,4 м Х 12,1 м</p>
                 </div>
+                <!--                <div><br></div>-->
                 <div class="item-inner-text2-2">
-                  <h4>Площадь:</h4>
+                  <h4 class="built-houses-h4">Площадь:</h4>
                   <p class="item-inner-text2-m2">163,2 м<sup>2</sup></p>
                 </div>
               </div>
@@ -734,42 +885,50 @@
         </div>
         <div class="item item6">
           <div class="item-inner">
-            <img src="images/project-house006-image1.png" alt="Дом">
+            <img src="images/slider-photo4.png" alt="Дом">
             <div class="item-inner-desc">
               <div class="item-inner-text item-inner-text1">
                 <h4>Modern house 006</h4>
-                <p>Владимирская обл., г. Гусь-Хрустальный, 12</p>
+                <p class="item-inner-text11">Владимирская обл., г. Гусь-Хрустальный, 12</p>
+                <p class="item-inner-text12">Владимирская обл.,</p>
+                <p class="item-inner-text12">г. Гусь-Хрустальный, 12</p>
               </div>
               <div class="item-inner-line"></div>
               <div class="item-inner-text item-inner-text2">
                 <div class="item-inner-text2-2">
-                  <h4>Габариты:</h4>
+                  <h4 class="built-houses-h4">Габариты:</h4>
                   <p>8,1 м Х 8,8 м</p>
                 </div>
+                <!--                <div><br></div>-->
                 <div class="item-inner-text2-2">
-                  <h4>Площадь:</h4>
+                  <h4 class="built-houses-h4">Площадь:</h4>
                   <p class="item-inner-text2-m2">156,2 м<sup>2</sup></p>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
         <div class="item item7">
           <div class="item-inner">
-            <img src="images/project-house007-image1.png" alt="Дом">
+            <img src="images/slider-photo5.png" alt="Дом">
             <div class="item-inner-desc">
               <div class="item-inner-text item-inner-text1">
                 <h4>Modern house 007</h4>
-                <p>Дальневосточный округ, г. Комсомольск-на-Амуре, 28</p>
+                <!--                <p>Дальневосточный округ,<br> г. Комсомольск-на-Амуре, 28</p>-->
+                <p class="item-inner-text11">Дальневосточный округ, г. Комсомольск-на-Амуре, 28</p>
+                <p class="item-inner-text12">Дальневосточный округ,</p>
+                <p class="item-inner-text12">г. Комсомольск-на-Амуре, 28</p>
               </div>
               <div class="item-inner-line"></div>
               <div class="item-inner-text item-inner-text2">
                 <div class="item-inner-text2-2">
-                  <h4>Габариты:</h4>
+                  <h4 class="built-houses-h4">Габариты:</h4>
                   <p>12,2 м Х 15,4 м</p>
                 </div>
+                <!--                <div><br></div>-->
                 <div class="item-inner-text2-2">
-                  <h4>Площадь:</h4>
+                  <h4 class="built-houses-h4">Площадь:</h4>
                   <p class="item-inner-text2-m2">181,6 м<sup>2</sup></p>
                 </div>
               </div>
@@ -780,12 +939,15 @@
       </div>
     </div>
   </div>
-
-
 </section>
 
 <section class="guarant">
-  <h2 class="title" id="guarant">Гарантии и условия оплаты</h2>
+  <div class="guarant-title">
+    <h2 class="title" id="guarant">
+      <span>Гарантии</span></h2>
+    <h2 class="title guarant-title-two">
+      <span>и условия оплаты</span></h2>
+  </div>
   <div class="container">
     <div class="guarant-2items">
       <div class="guarant-2item">
@@ -797,6 +959,7 @@
             Гарантия сроков
           </div>
           <div class="item-text">
+            <!--            Юридическая гарантия сроков. <br/>До 0.1 % от суммы за каждый день просрочки-->
             Юридическая гарантия сроков. <br/>До 0.1 % от суммы за каждый день просрочки
           </div>
         </div>
@@ -810,13 +973,14 @@
             Страховка
           </div>
           <div class="item-text">
-            Гарантия 10 лет. Страховка дома. Обработка <br/>дома. Сервисное обслуживание
+            <!--            Гарантия 10 лет. Страховка дома. Обработка <br/>дома. Сервисное обслуживание-->
+            Гарантия 10 лет. Страховка дома. Обработка дома. Сервисное обслуживание
           </div>
         </div>
       </div>
     </div>
     <div class="guarant-3items">
-      <div class="guarant-3item">
+      <div class="guarant-3item guarant-3item-1">
         <div class="guarant-3item-image guarant-3item-image1">
           <img src="images/guarant-3item-writing.png" alt="Значок - гарантия сметы">
         </div>
@@ -829,7 +993,7 @@
           </div>
         </div>
       </div>
-      <div class="guarant-3item">
+      <div class="guarant-3item guarant-3item-2">
         <div class="guarant-3item-image guarant-3item-image2">
           <img src="images/guarant-3item-people.png" alt="Значок - без посредников">
         </div>
@@ -842,7 +1006,7 @@
           </div>
         </div>
       </div>
-      <div class="guarant-3item">
+      <div class="guarant-3item guarant-3item-3">
         <div class="guarant-3item-image guarant-3item-image3">
           <img src="images/guarant-3item-coin.png" alt="Значок - оплата по факту">
         </div>
@@ -991,13 +1155,14 @@
   <div class="container">
     <div class="footer-address">
       <div class="footer-address-text">г. Киев, бульвар Кольцова, 14-Ж</div>
-      <div>Пн-Пт: 10:00 -19:00</div>
+      <div class="footer-address-office-hours">Пн-Пт: 10:00 -19:00</div>
     </div>
     <div class="footer-logo-social">
       <a href="#" class="logo">
         <img src="images/logo.png" alt="Логотип">
       </a>
       <div class="social">
+        <!--        ! какие вставить ссылки для перехода в инст? -->
         <a href="#" class="logo-inst">
           <img src="images/instagram.png" alt="Значок Инстаграмм">
         </a>
@@ -1017,7 +1182,9 @@
             <div class="cycle-small"></div>
           </div>
         </div>
-        <div class="request-call-text">Заказать звонок</div>
+        <a href="#consult">
+          <div class="request-call-text">Заказать звонок</div>
+        </a>
       </div>
     </div>
   </div>

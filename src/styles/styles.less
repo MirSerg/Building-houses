@@ -43,13 +43,18 @@
   display: block;
   color: #FFFFFF;
   font-family: MuseoSansCyrl700, sans-serif;
+  font-size: 18px;
+  text-align: right;
 
   .request-call-block {
     display: flex;
     align-items: center;
-    text-align: center;
-    width: 175px;
+    text-align: right;
+    width: 168px;
     padding-top: 14px;
+    margin-left: 4px;
+    //! не прижимается к правому краю
+    //justify-content: end;
 
     .cycle-big {
       width: 30px;
@@ -79,7 +84,7 @@
       }
     }
 
-    a{
+    a {
       text-decoration: none;
     }
 
@@ -89,6 +94,7 @@
       text-decoration: none;
       padding-bottom: 5px;
       border-bottom: 1px solid transparent;
+      font-size: 16px;
       cursor: pointer;
 
       &:hover {
@@ -106,7 +112,8 @@
   background-image: -moz-linear-gradient(0deg, rgb(252, 195, 114) 0%, rgb(240, 219, 188) 100%);
   background-image: -webkit-linear-gradient(0deg, rgb(252, 195, 114) 0%, rgb(240, 219, 188) 100%);
   background-image: -ms-linear-gradient(0deg, rgb(252, 195, 114) 0%, rgb(240, 219, 188) 100%);
-  width: 365px;
+  width: 100%;
+  max-width: 365px;
   height: 60px;
   box-sizing: border-box;
   border-radius: 30px;
@@ -125,9 +132,15 @@
   transition-duration: 0.3s;
   -webkit-transition-property: box-shadow;
   transition-property: box-shadow;
+  transition: font-size 0.65s;
+  -webkit-transition: font-size 0.65s;
+  -moz-transition: font-size 0.65s;
+  -o-transition: font-size 0.65s;
 }
+
 .hvr-glow:hover, .hvr-glow:focus, .hvr-glow:active {
   box-shadow: 4px 4px 34px 0px rgb(239, 228, 192);
+  font-size: 18.5px;
 }
 
 .title {
@@ -143,20 +156,21 @@
   font-size: 18px;
   font-family: MuseoSansCyrl500, sans-serif;
   color: #FFF;
-  padding-bottom: 15px;
+  padding-bottom: 16px;
 }
 
 .item-text {
-  font-size: 18px;
+  font-size: 16px;
   font-family: MuseoSansCyrl100, sans-serif;
   color: #dededf;
   line-height: 1.313;
+  max-width: 370px;
   //margin-top: 13px;
 }
 
 .social {
   .logo-teleg {
-    padding: 0 40px 0 30px;
+    //padding: 0 40px 0 30px;
   }
 }
 
@@ -186,14 +200,131 @@
 }
 
 
+img.mfp-img {
+  width: 100%;
+  max-height: max-content !important;
+}
 
+/*При открытии попапа с изображением там меняется курсор, там не минусик а лупа, если хочешь это поправить,
+то нужно посмотреть в консоли разработчика какие классы отвечют за курсор:*/
+/*это для всего блока при открытой картинке делаем обычный курсор*/
+.mfp-container {
+  cursor: default;
+}
+
+/*это для крестика делаем курсор-указатель*/
+.mfp-zoom-out-cur,
+.mfp-zoom-out-cur .mfp-image-holder .mfp-close {
+  cursor: pointer;
+}
 
 //Блок 1 Начало
 .main {
-  background-image: url("dist/images/background1.png");
+  background: linear-gradient(to top, rgba(37, 37, 45, 0.55) 1%, rgba(0, 0, 0, .01)) 1%, url("../../images/background1.png") center / cover;
+  //background-image: url("../../images/background1.png");
+  //mask-image: url("../../images/background1.png");
+  //mask-image: image(url("../../images/background1.png"), skyblue, linear-gradient(rgba(0, 0, 0, 1.0), transparent));
   background-size: cover; /* cover - чтобы картинка закрывала всю видимую область */
   background-position: center;
   height: 859px;
+
+  .menu-navicon {
+    display: none;
+    position: absolute;
+    //margin-top: 613px;
+    z-index: 9999;
+    width: 430px;
+
+    .menu-navicon-ground {
+      background-color: #25252DFF;
+      padding-left: 200px;
+      height: 970px;
+      //  left: 0px;
+      //  top: 0px;
+      //  width: 612px;
+      //}
+
+      .cross {
+        img {
+          margin-top: 0;
+          margin-bottom: 51px;
+        }
+      }
+
+      .menu-navicon-header {
+        margin-bottom: 61px;
+        font-size: 40px;
+        font-family: Neumann, sans-serif;
+        color: #FFF;
+        //position: absolute;
+      }
+
+      ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        margin-right: 96px;
+        cursor: pointer;
+
+        .menu-item {
+          &:hover {
+            color: #ecc66b;
+            list-style: inside;
+            //border-bottom: 2px solid #957f4d;
+          }
+
+          a {
+            text-decoration: none;
+            padding-bottom: 3px;
+            border-bottom: 3px solid transparent;
+            font-size: 18px;
+            font-family: MuseoSansCyrl300, sans-serif;
+            font-weight: 700;
+            color: #FFF;
+            //line-height: 0.833;
+            //position: absolute;
+            &:hover {
+              color: #ecc66b;
+              list-style: inside;
+              //border-bottom: 2px solid #957f4d;
+            }
+          }
+        }
+      }
+
+      .social {
+        margin-top: 71px;
+
+        .logo-teleg {
+          padding: 0 30px;
+        }
+      }
+
+      &.open {
+        display: flex;
+        flex-direction: column;
+        //align-items: center;
+        //position: fixed;
+        width: 100%;
+        height: 100%;
+        //background: rgba(211, 204, 204, 0.71);
+        left: 0;
+        bottom: 0;
+        z-index: 999;
+        //justify-content: center;
+      }
+
+      .close {
+        display: block;
+        //width: 20px;
+        //position: absolute;
+        //top: 20px;
+        //left: 20px;
+      }
+    }
+  }
+
 
   .header {
     justify-content: space-around;
@@ -224,95 +355,6 @@
         vertical-align: middle;
       }
 
-      .menu-navicon {
-        display: none;
-        position: absolute;
-        margin-top: 613px;
-
-        //.menu-navicon-ground {
-        //  background-color: #25252DFF;
-        //  left: 0px;
-        //  top: 0px;
-        //  width: 612px;
-        //  height: 970px;
-        //}
-
-        .cross {
-          img {
-            margin-top: 0;
-            margin-bottom: 51px;
-          }
-        }
-
-        .menu-navicon-header {
-          margin-bottom: 61px;
-          font-size: 40px;
-          font-family: Neumann, sans-serif;
-          color: #FFF;
-          //position: absolute;
-        }
-
-        ul {
-          list-style: none;
-          display: flex;
-          flex-direction: column;
-          gap: 40px;
-          margin-right: 96px;
-          cursor: pointer;
-
-          .menu-item {
-            &:hover {
-              color: #ecc66b;
-              list-style: inside;
-              //border-bottom: 2px solid #957f4d;
-            }
-
-            a {
-              text-decoration: none;
-              padding-bottom: 3px;
-              border-bottom: 3px solid transparent;
-              font-size: 18px;
-              font-family: MuseoSansCyrl300, sans-serif;
-              font-weight: 700;
-              color: #FFF;
-              //line-height: 0.833;
-              //position: absolute;
-              &:hover {
-                color: #ecc66b;
-                list-style: inside;
-                //border-bottom: 2px solid #957f4d;
-              }
-            }
-          }
-        }
-
-        .social {
-          margin-top: 71px;
-        }
-
-        &.open {
-          display: flex;
-          flex-direction: column;
-          //align-items: center;
-          //position: fixed;
-          width: 100%;
-          height: 100%;
-          //background: rgba(211, 204, 204, 0.71);
-          left: 0;
-          bottom: -18px;
-          //z-index: 999;
-          //justify-content: center;
-        }
-
-        .close {
-          display: block;
-          //width: 20px;
-          //position: absolute;
-          //top: 20px;
-          //left: 20px;
-        }
-
-      }
 
     }
   }
@@ -338,10 +380,12 @@
 
       .main-info {
         width: 552px;
+        //width: auto;
         text-align: center;
 
         h1 {
           font-size: 50px;
+          display: inline-block;
         }
 
         .main-text {
@@ -398,22 +442,19 @@
         position: absolute;
         left: 850px;
         top: 55px;
+        gap: 30px;
 
-        .logo-inst:hover {
+        .logo-inst, .logo-teleg, .logo-youtube {
+          img {
+            // ! не понятно откуда берется этот отступ (поэтому !important) padding: 20px 0px;
+            padding: 0 !important;
+          }
+        }
+
+        .logo-inst:hover, .logo-teleg:hover, .logo-youtube:hover {
           opacity: 0.9;
         }
 
-        .logo-teleg {
-          padding: 30px 0;
-        }
-
-        .logo-teleg:hover {
-          opacity: 0.9;
-        }
-
-        .logo-youtube:hover {
-          opacity: 0.9;
-        }
       }
 
     }
@@ -433,100 +474,124 @@
 }
 
 
-
 /*
 ====== Zoom effect ======
 */
-//.mfp-zoom-in {
-//
-//  /* start state */
-//  .mfp-with-anim {
-//    opacity: 0;
-//    transition: all 0.2s ease-in-out;
-//    transform: scale(0.8);
-//  }
-//
-//  &.mfp-bg {
-//    opacity: 0;
-//    transition: all 0.3s ease-out;
-//  }
-//
-//  /* animate in */
-//  &.mfp-ready {
-//    .mfp-with-anim {
-//      opacity: 1;
-//      transform: scale(1);
-//    }
-//    &.mfp-bg {
-//      opacity: 0.8;
-//    }
-//  }
-//
-//  /* animate out */
-//  &.mfp-removing {
-//
-//    .mfp-with-anim {
-//      transform: scale(0.8);
-//      opacity: 0;
-//    }
-//    &.mfp-bg {
-//      opacity: 0;
-//    }
-//
-//  }
-//
-//}
+.mfp-zoom-in {
 
+  /* start state */
 
+  .mfp-with-anim {
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    transform: scale(0.8);
+  }
+
+  &.mfp-bg {
+    opacity: 0;
+    transition: all 0.3s ease-out;
+  }
+
+  /* animate in */
+
+  &.mfp-ready {
+    .mfp-with-anim {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    &.mfp-bg {
+      opacity: 0.8;
+    }
+  }
+
+  /* animate out */
+
+  &.mfp-removing {
+
+    .mfp-with-anim {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+
+    &.mfp-bg {
+      opacity: 0;
+    }
+
+  }
+
+}
 
 
 /* padding-bottom and top for image */
+
 .mfp-no-margins img.mfp-img {
   padding: 0;
 }
+
 /* position of shadow behind the image */
+
 .mfp-no-margins .mfp-figure:after {
   top: 0;
   bottom: 0;
 }
+
 /* padding for main container */
+
 .mfp-no-margins .mfp-container {
   padding: 0;
 }
-
-
 
 
 /*
 for zoom animation
 uncomment this part if you haven't added this code anywhere else
 */
+
 .mfp-with-zoom .mfp-container,
 .mfp-with-zoom.mfp-bg {
-	opacity: 0;
-	-webkit-backface-visibility: hidden;
-	-webkit-transition: all 0.3s ease-out;
-	-moz-transition: all 0.3s ease-out;
-	-o-transition: all 0.3s ease-out;
-	transition: all 0.3s ease-out;
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 .mfp-with-zoom.mfp-ready .mfp-container {
-		opacity: 1;
+  opacity: 1;
 }
+
 .mfp-with-zoom.mfp-ready.mfp-bg {
-		opacity: 0.8;
+  opacity: 0.8;
 }
 
 .mfp-with-zoom.mfp-removing .mfp-container,
 .mfp-with-zoom.mfp-removing.mfp-bg {
-	opacity: 0;
+  opacity: 0;
 }
 
+//.mfp-image-holder .mfp-content {
+//  width: 100%;
+//}
 
+//.mfp-zoom-out-cur .mfp-wrap .mfp-container .mfp-content .mfp-figure
+//.projects {
+//  .container {
+//    .project-block1 {
+//      .project-gallery-items {
+//        .project-gallery-item {
 
+//}
+//      }
+//    }
+//  }
+//}
 
-
+.project-gallery-item-one {
+  width: 588px;
+  height: 370px;
+}
 
 //Блок 2 Наши проекты
 .projects {
@@ -537,15 +602,67 @@ uncomment this part if you haven't added this code anywhere else
     padding-bottom: 70px;
   }
 
+  .project-title-block1 {
+    display: none;
+  }
+
   .container {
-    //width: 486px;
+    ////width: 486px;
     display: grid;
-    grid-column-gap: 118px;
     grid-template-columns: repeat(auto-fill, minmax(320px, 540px));
-    //grid-template-rows: repeat(auto-fill);
+    grid-column-gap: calc(10px + 10 * (100vw / 1600));
+    ////grid-column-gap: 118px;
     justify-content: space-between;
 
+    .modern-house-003 {
+      .project-block1 {
+        .project-gallery-items {
+          .project-gallery-item {
+            .project-gallery-item-one {
+              img {
+                padding: 0;
+              }
+            }
+          }
+        }
+      }
+
+      .project-block2 {
+        margin-left: 41px;
+      }
+    }
+
+    .modern-house-004 {
+      .project-block2 {
+        margin-left: 0;
+      }
+
+      .project-block1 {
+        margin-left: -50px;
+      }
+    }
+
+    .modern-house-005 {
+      .project-block2 {
+        margin-left: 80px;
+      }
+    }
+
+    .modern-house-006 {
+      .project-block2 {
+        margin-left: 0;
+        margin-right: 80px;
+      }
+    }
+
+    .modern-house-007 {
+      .project-block2 {
+        margin-left: 80px;
+      }
+    }
+
     .project-block1 {
+      //max-width: 707px;
       width: 588px;
       //padding-bottom: 70px;
       //margin-right: 126px;
@@ -558,34 +675,52 @@ uncomment this part if you haven't added this code anywhere else
         margin: 0;
         justify-content: center;
 
+
         .gallery-three {
           display: grid;
           grid-column-gap: 24px;
           grid-template-columns: 1fr 1fr 1fr;
           justify-content: space-between;
           margin-bottom: 113px;
+          margin-top: 24px;
           position: relative;
+
+          .project-gallery-item-three {
+            width: 180px;
+            height: 135px;
+          }
         }
 
         .project-gallery-item {
           max-width: 100%;
-          margin-top: 24px;
+          margin-bottom: 24px;
           background-position: center;
           text-align: center;
           align-content: center;
 
-          width: 180px;
-          height: 135px;
           //чтобы изображение могло заполнять высоту и ширину своего блока (элемента сетки), сохраняя его соотношение сторон
           object-fit: cover;
+          //width: 180px;
+          //height: 135px;
+          width: 100%;
+          height: 100%;
           /* применим свойство cover, чтобы залить весь блок картинкой */
           /* можно в инструментах браузера подобрать нужное свойство */
           background-size: cover;
           position: relative;
 
-          &.project-gallery-big {
-            width: 588px;
-            height: 370px;
+          .project-gallery-item-one {
+            img {
+              padding: 0;
+            }
+          }
+
+          .project-gallery-big {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            //width: 707px;
+            //height: 531px;
             margin-top: 0;
           }
 
@@ -622,7 +757,9 @@ uncomment this part if you haven't added this code anywhere else
     }
 
     .project-block2 {
-      width: 486px;
+      max-width: 500px;
+      width: 500px;
+      margin-left: 130px;
 
       .project-title {
         padding-bottom: 40px;
@@ -631,24 +768,27 @@ uncomment this part if you haven't added this code anywhere else
         color: #FFF;
         text-align: left;
         width: 264px;
-        height: 23px;
+        //height: 23px;
       }
 
       .project-text {
         font-size: 18px;
         font-family: MuseoSansCyrl300, sans-serif;
         color: #FFF;
-        line-height: 1.278;
+        //line-height: 1.278;
+        line-height: 1.4;
         text-align: left;
-        width: 500px;
+        max-width: 500px;
       }
 
       .project-advantages-items {
-        padding: 50px 0;
+        padding: 38px 0;
         //display: flex;
         //vertical-align: middle;
         font-size: 0;
         text-align: center;
+        max-width: 500px;
+        width: 500px;
 
         .project-advantage {
           display: inline-block;
@@ -658,8 +798,14 @@ uncomment this part if you haven't added this code anywhere else
           border: 1px solid #d8b664;
           //text-align: center;
           //vertical-align: middle;
-          margin-right: 73px;
+          margin-right: 78px;
           position: relative;
+
+          //animation: rotate 12s linear infinite;
+
+          .project-advantage-item1 {
+            margin: 41px 0 0 -35px;
+          }
 
           &:last-child {
             margin-right: 0;
@@ -672,14 +818,33 @@ uncomment this part if you haven't added this code anywhere else
             color: #ecc66b;
             //text-align: center;
             //vertical-align: middle;
-            margin: 32px 0 0 -38px;
+            margin: 27px 0 0 -38px;
             width: 72px;
           }
         }
+
+
+        //@keyframes rotate {
+        //  0% {
+        //    transform: rotate(0deg);
+        //  }
+        //
+        //  100% {
+        //    transform: rotate(360deg);
+        //  }
+        //}
+
+
       }
 
-      .project-action-download{
-
+      .project-action-download {
+        .btn {
+          //width: 382px;
+          color: #FFFFFFFF;
+          text-align: center;
+          background: transparent;
+          border: 1px solid #FFF;
+        }
       }
 
       .project-action {
@@ -687,10 +852,15 @@ uncomment this part if you haven't added this code anywhere else
 
       }
 
-      &.project-block-last {
-        padding-bottom: 120px;
-      }
+      //&.project-block-last {
+      //  padding-bottom: 120px;
+      //}
 
+    }
+
+    .modern-house-003,
+    .modern-house-004 {
+      display: contents;
     }
 
     &.container3 {
@@ -698,6 +868,11 @@ uncomment this part if you haven't added this code anywhere else
     }
   }
 
+  .modern-house-005,
+  .modern-house-006,
+  .modern-house-007 {
+    display: contents;
+  }
 
   .project-more {
     display: flex;
@@ -747,22 +922,6 @@ uncomment this part if you haven't added this code anywhere else
     }
 
     .techno-items {
-      .techno-item {
-        .techno-item-desc {
-          display: inline-block;
-
-
-          .techno-item-text {
-            font-size: 16px;
-          }
-        }
-
-        .techno-item-image {
-          position: absolute;
-          display: inline-block;
-        }
-      }
-
       .techno-item1 {
         position: absolute;
         top: 91px;
@@ -770,13 +929,48 @@ uncomment this part if you haven't added this code anywhere else
         width: 268px;
 
         .techno-item {
-          .techno-item-image1 {
-            margin: -11px 0 0 214px;
+          .techno-item-line1 {
+            border-bottom: solid 1px #ecc66b;
+            width: 192px;
+            margin-left: 204px;
           }
 
-          .techno-item-desc1 {
-            margin-top: 1px;
+          .techno-item-line2 {
+            border-bottom: solid 1px #ecc66b;
+            width: 28px;
+            transform: rotate(45deg);
+            margin-left: 391px;
+            margin-top: 9px;
           }
+
+          .techno-item-cycle {
+            .mix-techno-item-cycle(401px);
+
+            .techno-item-ball {
+              .mix-techno-item-ball();
+            }
+          }
+
+          .techno-item-desc {
+            display: inline-block;
+
+            .techno-item-text {
+              font-size: 16px;
+            }
+          }
+
+          .techno-item-image {
+            position: absolute;
+            display: inline-block;
+          }
+        }
+
+        //  .techno-item-image1 {
+        //    margin: -11px 0 0 214px;
+        //  }
+        //
+        .techno-item-desc1 {
+          margin-top: -43px;
         }
       }
 
@@ -786,13 +980,41 @@ uncomment this part if you haven't added this code anywhere else
         left: 970px;
         width: 270px;
 
+        //.techno-item-adaptive{
+        //  display: none;
+        //}
+
         .techno-item {
-          .techno-item-image2 {
-            margin: -4px 0 0 -212px;
+          .techno-item-line1 {
+            border-bottom: solid 1px #ecc66b;
+            width: 120px;
+            margin-left: -152px;
+            margin-top: 3px;
           }
 
+          .techno-item-line2 {
+            border-bottom: solid 1px #ecc66b;
+            width: 28px;
+            transform: rotate(135deg);
+            margin-left: -175px;
+            margin-top: 9px;
+          }
+
+          .techno-item-cycle {
+            margin-left: -192px;
+            .mix-techno-item-cycle(-192px);
+
+            .techno-item-ball {
+              .mix-techno-item-ball();
+            }
+          }
+
+          //.techno-item-image2 {
+          //  margin: -4px 0 0 -212px;
+          //}
+          //
           .techno-item-desc2 {
-            margin: 2px 0 0 -7px;
+            margin: -53px 0 0 -13px;
           }
         }
       }
@@ -804,12 +1026,44 @@ uncomment this part if you haven't added this code anywhere else
         width: 238px;
 
         .techno-item {
-          .techno-item-image3 {
-            margin: -4px 0 0 233px;
+          position: relative;
+
+          .techno-item-line1 {
+            position: absolute;
+            border-bottom: solid 1px #ecc66b;
+            width: 92px;
+            margin-left: 220px;
+            margin-top: 41px;
           }
 
+          .techno-item-line2 {
+            position: absolute;
+            border-bottom: solid 1px #ecc66b;
+            width: 28px;
+            transform: rotate(135deg);
+            margin-left: 308px;
+            margin-top: 31px;
+          }
+
+          .techno-item-cycle {
+            margin-top: 10px;
+            .mix-techno-item-cycle(323px);
+
+            .techno-item-ball {
+              .mix-techno-item-ball();
+            }
+          }
+
+          //.techno-item-image3 {
+          //  margin: -4px 0 0 233px;
+          //}
+
           .techno-item-desc3 {
-            margin: 40px 0 0 3px;
+            margin: 0;
+
+            .techno-item-text {
+              max-width: 230px;
+            }
           }
         }
       }
@@ -818,15 +1072,53 @@ uncomment this part if you haven't added this code anywhere else
         position: absolute;
         top: 270px;
         left: 930px;
-        width: 238px;
+        width: 170px;
 
         .techno-item {
-          .techno-item-image4 {
-            margin: -4px 0 0 -265px;
+          position: relative;
+
+          .techno-item-line1 {
+            position: absolute;
+            border-bottom: solid 1px #ecc66b;
+            width: 202px;
+            margin-left: -210px;
+            margin-top: 41px;
           }
 
+          .techno-item-line2 {
+            position: absolute;
+            border-bottom: solid 1px #ecc66b;
+            width: 28px;
+            transform: rotate(45deg);
+            margin-left: -234px;
+            margin-top: 31px;
+          }
+
+          .techno-item-cycle {
+            margin-left: -249px;
+            .mix-techno-item-cycle(-249px);
+
+            .techno-item-ball {
+              .mix-techno-item-ball();
+            }
+          }
+
+          //.techno-item-image4 {
+          //  margin: -4px 0 0 -265px;
+          //}
+
           .techno-item-desc4 {
-            margin: 48px 0 0 4px;
+            margin: -1px 0 0 10px;
+
+            .item-header {
+              max-width: 190px;
+              width: 190px;
+            }
+
+            .techno-item-text {
+              max-width: 234px;
+              width: 234px;
+            }
           }
         }
       }
@@ -838,17 +1130,61 @@ uncomment this part if you haven't added this code anywhere else
         width: 229px;
 
         .techno-item {
-          .techno-item-image5 {
-            margin: -4px 0 0 -153px;
+          position: relative;
+
+          .techno-item-line1 {
+            position: absolute;
+            border-bottom: solid 1px #ecc66b;
+            width: 80px;
+            margin-left: -94px;
+            margin-top: 44px;
           }
 
+          .techno-item-line2 {
+            position: absolute;
+            border-bottom: solid 1px #ecc66b;
+            width: 28px;
+            transform: rotate(45deg);
+            margin-left: -118px;
+            margin-top: 34px;
+          }
+
+          .techno-item-cycle {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 1px solid #ecc66b;
+            position: relative;
+            box-shadow: 0 0 25.5px 4.5px rgba(0, 0, 0, 0.004);
+            margin-left: -135px;
+            margin-top: 16px;
+
+            .techno-item-ball {
+              .mix-techno-item-ball();
+            }
+          }
+
+          //.techno-item-image5 {
+          //  margin: -4px 0 0 -153px;
+          //}
+
           .techno-item-desc5 {
-            margin: 36px 0 0 -7px;
+            margin: 0;
+
+            .techno-item-text {
+              max-width: 227px;
+              width: 227px;
+            }
           }
         }
       }
     }
+
+    .techno-grid {
+      display: none;
+    }
   }
+
 }
 
 //Блок 4 6 шагов к вашему новому дому
@@ -856,20 +1192,29 @@ uncomment this part if you haven't added this code anywhere else
   background-color: #25252d;
 
   .container {
+    &.container-six-steps {
+      //margin-left: 420px;
+    }
+
     .steps-items {
       display: grid;
-      grid-template-columns: 251px 281px 254px;
+      grid-template-columns: repeat(3, 1fr);
+
+      //grid-template-columns: repeat(3, minmax(240px, 1fr));
+      //grid-template-columns: 251px 281px 254px;
       //grid-template-columns: repeat(auto-fill, 251px 281px 254px);
       //grid-template-columns: repeat(3, 251px 281px 254px);
       //grid-template-columns: repeat(auto-fill, minmax(251px, 281px));
       justify-content: space-between;
       row-gap: 100px;
-      padding: 122px 0 120px 0;
+      padding: 120px 10px;
 
       .steps-item {
         display: flex;
         vertical-align: middle;
         position: relative;
+        margin-left: 90px;
+        width: 330px;
 
         span {
           font-family: Neumann, sans-serif;
@@ -889,22 +1234,52 @@ uncomment this part if you haven't added this code anywhere else
         }
 
         .steps-item-desc {
-          display: inline-block;
+          //display: inline-block;
           padding-left: 17px;
           z-index: 2;
+
 
           .item-header {
             padding-bottom: 10px;
           }
 
+          .item-text {
+            font-size: 18px;
 
-          //.steps-item-text {
-          //  font-size: 18px;
-          //  font-family: MuseoSansCyrl100, sans-serif;
-          //  color: #FFF;
-          //  line-height: 1.278;
-          //  //width: 210px;
-          //}
+            .item-text-under {
+              position: unset;
+              font-size: 18px;
+              font-family: MuseoSansCyrl100, sans-serif;
+              color: #dededf;
+              font-weight: 700;
+              text-decoration: underline;
+              //line-height: 1.313;
+              //max-width: 370px;
+            }
+          }
+        }
+
+        .steps-item-desc-01 {
+          max-width: 240px;
+        }
+
+        .steps-item-desc-02 {
+          max-width: 262px;
+        }
+
+        .steps-item-desc-03 {
+          max-width: 202px;
+        }
+
+        .steps-item-desc-04 {
+          max-width: 195px;
+        }
+
+        //.steps-item-desc-05 {
+        //  max-width: 242px;
+        //}
+        .steps-item-desc-06 {
+          max-width: 173px;
         }
       }
     }
@@ -949,7 +1324,8 @@ uncomment this part if you haven't added this code anywhere else
           padding: 0;
           margin: 0;
           list-style: none;
-          text-align: center
+          text-align: center;
+          margin-left: -32px;
         }
 
         .slick-dots li button::before {
@@ -984,7 +1360,14 @@ uncomment this part if you haven't added this code anywhere else
             width: 588px;
             margin-bottom: 15px;
             //opacity: 0.4;
-
+            .item-inner-desc {
+              justify-content: space-around;
+              .item-inner-text{
+                .item-inner-text12{
+                  display: none;
+                }
+              }
+            }
           }
         }
 
@@ -1001,7 +1384,7 @@ uncomment this part if you haven't added this code anywhere else
 
       .slick-track {
         padding-top: 53px;
-        padding-bottom: 53px;
+        padding-bottom: 60px;
       }
 
       .slick-slide {
@@ -1059,11 +1442,11 @@ uncomment this part if you haven't added this code anywhere else
           }
 
           &.item-inner-text1 {
-            padding-left: 58px;
+            //padding-left: 58px;
           }
 
           &.item-inner-text2 {
-            padding-left: 43px;
+            //padding-left: 43px;
           }
         }
 
@@ -1071,7 +1454,7 @@ uncomment this part if you haven't added this code anywhere else
           background-color: #FFF;
           width: 1px;
           height: 61px;
-          margin-left: 34px;
+          //margin-left: 34px;
         }
 
         .item-inner-text2-2 {
@@ -1090,19 +1473,20 @@ uncomment this part if you haven't added this code anywhere else
             font-family: MuseoSansCyrl300, sans-serif;
           }
 
-          //margin-top: -3px;
-
           .item-inner-text2-m2 {
+            margin-top: -4px;
           }
         }
       }
 
-
-      //.slick-current {
-      //  .item-inner-desc{
-      //    display: flex;
-      //  }
-      //}
+      .slick-current {
+        .item-inner {
+          margin-top: -45px;
+          //  .item-inner-desc{
+          //    display: flex;
+          //  }
+        }
+      }
 
       .slick-slide img {
         width: 100%;
@@ -1178,7 +1562,7 @@ uncomment this part if you haven't added this code anywhere else
 
       .slick-list {
         padding-top: 55px !important;
-        padding-bottom: 55px !important;
+        //padding-bottom: 55px !important;
       }
     }
   }
@@ -1189,8 +1573,22 @@ uncomment this part if you haven't added this code anywhere else
   padding: 10px 0 0 0;
   background-color: #25252d;
 
-  h2 {
-    padding: 120px 0 71px 0;
+  .guarant-title {
+    display: flex;
+    justify-content: center;
+    padding-top: 64px;
+    padding-bottom: 71px;
+
+    h2 {
+      font-size: 40px;
+    }
+
+    #guarant {
+    }
+
+    .guarant-title-two {
+      padding: 0 0 71px 10px;
+    }
   }
 
   .container {
@@ -1288,7 +1686,8 @@ uncomment this part if you haven't added this code anywhere else
 //Блок 7 Получите индивидуальную консультацию
 .consult {
   background-color: #25252d;
-  padding-bottom: 65px;
+  padding-bottom: 60px;
+  //padding-bottom: calc(65px * 4);
 
   .container {
     display: grid;
@@ -1318,9 +1717,10 @@ uncomment this part if you haven't added this code anywhere else
           }
 
           .btn {
-            width: 407px;
+            max-width: 409px;
             color: #FFFFFFFF;
-            text-align: center;
+            text-align: left;
+            padding-left: 25px;
             background: transparent;
             border: 1px solid #FFF;
           }
@@ -1335,9 +1735,10 @@ uncomment this part if you haven't added this code anywhere else
           }
 
           .btn {
-            width: 407px;
+            max-width: 409px;
             color: #FFFFFFFF;
-            text-align: center;
+            text-align: left;
+            padding-left: 25px;
             background: transparent;
             border: 1px solid #FFF;
           }
@@ -1348,7 +1749,7 @@ uncomment this part if you haven't added this code anywhere else
           text-align: center;
 
           .btn {
-            width: 407px;
+            max-width: 409px;
             //color: #FFFFFFFF;
             text-align: center;
             //border-color: #FFFFFFFF;
@@ -1417,7 +1818,14 @@ uncomment this part if you haven't added this code anywhere else
       //background-size: cover;
       background-position: center;
       z-index: 100;
+      max-width: 100%;
+      height: auto;
       //margin-top: -345px;
+      img {
+        background-size: cover;
+        background-position: center;
+        max-width: 100%;
+      }
     }
 
     //background-image: url("../../images/points.png");
@@ -1455,7 +1863,7 @@ uncomment this part if you haven't added this code anywhere else
         padding-bottom: 160px;
 
         .btn {
-          width: 300px;
+          width: 306px;
         }
       }
 
@@ -1576,14 +1984,38 @@ uncomment this part if you haven't added this code anywhere else
 
     .footer-logo-social {
       text-align: center;
+      margin-left: -30px;
 
       .logo {
         img {
           padding-bottom: 56px;
         }
       }
+
+      .social {
+        .logo-teleg {
+          padding: 0 40px 0 30px;
+        }
+      }
     }
   }
+
+}
+
+.logo-inst {
+  text-decoration: none;
+}
+
+.logo-teleg {
+  text-decoration: none;
+}
+
+.logo-youtube {
+  text-decoration: none;
+}
+
+.logo-inst:hover, .logo-teleg:hover, .logo-youtube:hover {
+  opacity: 0.9;
 }
 
 .loader {
@@ -1702,6 +2134,15 @@ uncomment this part if you haven't added this code anywhere else
 
 @import 'mixins';
 @import 'theme';
+@import 'adaptive-1600';
+@import 'adaptive-1390';
+@import 'adaptive-1280';
+@import 'adaptive-1100';
+@import 'adaptive-769';
+@import 'adaptive-620';
+@import 'adaptive-425';
+@import 'adaptive-380';
+
 //@import 'slick';
 //@import 'slick-theme';
 

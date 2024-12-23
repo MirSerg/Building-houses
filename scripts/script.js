@@ -159,16 +159,21 @@ $(document).ready(function () {
     let guarant = $('#guarant');
     guarant.html("Гарантии и условия оплаты")
   } else {
+    // при клике на круглые маркеры подставляем информацию в 1-й блок
     // console.log('window.visualViewport.width= ' + window.visualViewport.width);
+    let technoGridItemHeader1 = $('.techno-grid-item-header1');
+    let technoGridItemText1 = $('.techno-grid-item-text1');
+    
     let technoItemCycle1 = $('.techno-item-cycle1');
     // console.log("technoItemCycle1=" + technoItemCycle1);
     technoItemCycle1.on('click', function () {
-      console.log("technoItemCycle1");
+      console.log("technoItemCycle1= click");
     });
+    
     let technoItemCycle2 = $('.techno-item-cycle2');
     // console.log("technoItemCycle1=" + technoItemCycle1);
     technoItemCycle2.on('click', function () {
-      console.log("technoItemCycle2");
+      console.log("technoItemCycle2= click");
     });
     
     let technoItemCycle3 = $('.techno-item-cycle3');
@@ -176,26 +181,46 @@ $(document).ready(function () {
     technoItemCycle3.on('click', function () {
       console.log("technoItemCycle3= click");
       
+      // поиск в 3-м блоке заголовка
       let technoItemHeader3 = $('.techno-item-desc3 .item-header');
-      console.log("techno-item-desc3= " + technoItemHeader3.html());
+      // console.log("techno-item-desc3= " + technoItemHeader3.html());
       technoItemHeader3= technoItemHeader3.html();
-      console.log("techno-item-header3= " + technoItemHeader3);
+      // console.log("techno-item-header3= " + technoItemHeader3);
       
-      let technoItemHeader1 = $('#techno-item-header1');
-      console.log("начальное значение: techno-item-header1= " + technoItemHeader1.html());
-      technoItemHeader1.html(technoItemHeader3);
-      console.log("новое значение: techno-item-header1= " + technoItemHeader1.html());
+      // console.log("начальное значение: techno-item-header1= " + technoItemHeader1.html());
+      technoGridItemHeader1.html(technoItemHeader3);
+      // console.log("новое значение: techno-item-header1= " + technoGridItemHeader1.html());
+      
+      // поиск в 3-м блоке содержания
+      let technoItemText3 = $('.techno-item-desc3 .item-text');
+      technoItemText3= technoItemText3.html();
+      // console.log("techno-item-text3= " + technoItemText3);
+      technoGridItemText1.html(technoItemText3);
+      // console.log("новое значение: techno-grid-item-text1= " + technoGridItemText1.html());
     });
     
     let technoItemCycle4 = $('.techno-item-cycle4');
     // console.log("technoItemCycle1=" + technoItemCycle1);
     technoItemCycle4.on('click', function () {
-      console.log("technoItemCycle4");
+      console.log("technoItemCycle4= click");
+      let technoItemHeader4 = $('.techno-item-desc4 .item-header');
+      technoItemHeader4= technoItemHeader4.html();
+      technoGridItemHeader1.html(technoItemHeader4);
+      let technoItemText4 = $('.techno-item-desc4 .item-text');
+      technoItemText4= technoItemText4.html();
+      technoGridItemText1.html(technoItemText4);
     });
+    
     let technoItemCycle5 = $('.techno-item-cycle5');
     // console.log("technoItemCycle1=" + technoItemCycle1);
     technoItemCycle5.on('click', function () {
-      console.log("technoItemCycle5");
+      console.log("technoItemCycle5= click");
+      let technoItemHeader5 = $('.techno-item-desc5 .item-header');
+      technoItemHeader5= technoItemHeader5.html();
+      technoGridItemHeader1.html(technoItemHeader5);
+      let technoItemText5 = $('.techno-item-desc5 .item-text');
+      technoItemText5= technoItemText5.html();
+      technoGridItemText1.html(technoItemText5);
     });
   }
 
@@ -376,13 +401,26 @@ $(document).ready(function () {
   let showExcursionAction = $('.excursion-action');
   let showThankExcur = $('#thankYouExcur');
   orderSubmit.on('click', function () {
+    let orderText = $('.order-text');
+    let consultAssent = $('.consult-assent');
+    
     showOrderExcur.css('display', 'block');
     showOrderExcur.css('margin-top', '-460px');
     showOrderExcur.css('margin-left', '54px');
+    
+    showExcursionBlock.css('display', 'none');
+    showOrderExcur.css('margin-left', '-16px');
+    showOrderExcur.css('width', '330px');
+    orderText.css('width', '310px');
+    consultAssent.css('width', '280px');
+    consultAssent.css('padding-left', '20px');
+
   });
   
   let orderSubmitPopup = $('#btn-signup-popup');
   orderSubmitPopup.on('click', function () {
+
+    
     
     let name = $('#inputName');
     let phone = $('#inputPhone');

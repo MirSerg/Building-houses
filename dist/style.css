@@ -26,6 +26,9 @@
   font-family: Neumann;
   src: url("../fonts/Neumann.ttf");
 }
+body {
+  background-color: #25252d;
+}
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -426,7 +429,6 @@ uncomment this part if you haven't added this code anywhere else
 }
 .projects {
   padding: 102px 0 0 0;
-  background-color: #25252d;
 }
 .projects h2 {
   padding-bottom: 70px;
@@ -629,39 +631,41 @@ uncomment this part if you haven't added this code anywhere else
   cursor: pointer;
 }
 .technologies {
-  background-color: #25252d;
   padding-bottom: 224px;
 }
 .technologies .title {
   padding-bottom: 83px;
-}
-.technologies .container {
-  position: relative;
 }
 .technologies .container .techno-image {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.technologies .container .techno-items .techno-item1 {
+.technologies .container .techno-image .techno-items {
+  position: relative;
+  margin-left: -882px;
+  padding-left: 883px;
+  padding-top: 534px;
+}
+.technologies .container .techno-image .techno-items .techno-item1 {
   position: absolute;
   top: 91px;
   left: 12px;
-  width: 268px;
+  width: 0;
 }
-.technologies .container .techno-items .techno-item1 .techno-item .techno-item-line1 {
+.technologies .container .techno-image .techno-items .techno-item1 .techno-item .techno-item-line1 {
   border-bottom: solid 1px #ecc66b;
   width: 192px;
   margin-left: 204px;
 }
-.technologies .container .techno-items .techno-item1 .techno-item .techno-item-line2 {
+.technologies .container .techno-image .techno-items .techno-item1 .techno-item .techno-item-line2 {
   border-bottom: solid 1px #ecc66b;
   width: 28px;
   transform: rotate(45deg);
   margin-left: 391px;
   margin-top: 9px;
 }
-.technologies .container .techno-items .techno-item1 .techno-item .techno-item-cycle {
+.technologies .container .techno-image .techno-items .techno-item1 .techno-item .techno-item-cycle {
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -670,7 +674,7 @@ uncomment this part if you haven't added this code anywhere else
   box-shadow: 0 0 25.5px 4.5px rgba(0, 0, 0, 0.004);
   margin-left: 401px;
 }
-.technologies .container .techno-items .techno-item1 .techno-item .techno-item-cycle .techno-item-ball {
+.technologies .container .techno-image .techno-items .techno-item1 .techno-item .techno-item-cycle .techno-item-ball {
   position: absolute;
   width: 17px;
   height: 17px;
@@ -679,39 +683,40 @@ uncomment this part if you haven't added this code anywhere else
   top: 23%;
   left: 23%;
 }
-.technologies .container .techno-items .techno-item1 .techno-item .techno-item-desc {
+.technologies .container .techno-image .techno-items .techno-item1 .techno-item .techno-item-desc {
   display: inline-block;
+  width: 270px;
 }
-.technologies .container .techno-items .techno-item1 .techno-item .techno-item-desc .techno-item-text {
+.technologies .container .techno-image .techno-items .techno-item1 .techno-item .techno-item-desc .techno-item-text {
   font-size: 16px;
 }
-.technologies .container .techno-items .techno-item1 .techno-item .techno-item-image {
+.technologies .container .techno-image .techno-items .techno-item1 .techno-item .techno-item-image {
   position: absolute;
   display: inline-block;
 }
-.technologies .container .techno-items .techno-item1 .techno-item-desc1 {
+.technologies .container .techno-image .techno-items .techno-item1 .techno-item-desc1 {
   margin-top: -43px;
 }
-.technologies .container .techno-items .techno-item2 {
+.technologies .container .techno-image .techno-items .techno-item2 {
   position: absolute;
   top: 120px;
   left: 970px;
-  width: 270px;
+  width: 0;
 }
-.technologies .container .techno-items .techno-item2 .techno-item .techno-item-line1 {
+.technologies .container .techno-image .techno-items .techno-item2 .techno-item .techno-item-line1 {
   border-bottom: solid 1px #ecc66b;
   width: 120px;
   margin-left: -152px;
   margin-top: 3px;
 }
-.technologies .container .techno-items .techno-item2 .techno-item .techno-item-line2 {
+.technologies .container .techno-image .techno-items .techno-item2 .techno-item .techno-item-line2 {
   border-bottom: solid 1px #ecc66b;
   width: 28px;
   transform: rotate(135deg);
   margin-left: -175px;
   margin-top: 9px;
 }
-.technologies .container .techno-items .techno-item2 .techno-item .techno-item-cycle {
+.technologies .container .techno-image .techno-items .techno-item2 .techno-item .techno-item-cycle {
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -720,7 +725,7 @@ uncomment this part if you haven't added this code anywhere else
   box-shadow: 0 0 25.5px 4.5px rgba(0, 0, 0, 0.004);
   margin-left: -192px;
 }
-.technologies .container .techno-items .techno-item2 .techno-item .techno-item-cycle .techno-item-ball {
+.technologies .container .techno-image .techno-items .techno-item2 .techno-item .techno-item-cycle .techno-item-ball {
   position: absolute;
   width: 17px;
   height: 17px;
@@ -729,26 +734,27 @@ uncomment this part if you haven't added this code anywhere else
   top: 23%;
   left: 23%;
 }
-.technologies .container .techno-items .techno-item2 .techno-item .techno-item-desc2 {
+.technologies .container .techno-image .techno-items .techno-item2 .techno-item .techno-item-desc2 {
   margin: -53px 0 0 -13px;
+  width: 270px;
 }
-.technologies .container .techno-items .techno-item3 {
+.technologies .container .techno-image .techno-items .techno-item3 {
   position: absolute;
   top: 302px;
   left: 57px;
-  width: 238px;
+  width: 0;
 }
-.technologies .container .techno-items .techno-item3 .techno-item {
+.technologies .container .techno-image .techno-items .techno-item3 .techno-item {
   position: relative;
 }
-.technologies .container .techno-items .techno-item3 .techno-item .techno-item-line1 {
+.technologies .container .techno-image .techno-items .techno-item3 .techno-item .techno-item-line1 {
   position: absolute;
   border-bottom: solid 1px #ecc66b;
   width: 92px;
   margin-left: 220px;
   margin-top: 41px;
 }
-.technologies .container .techno-items .techno-item3 .techno-item .techno-item-line2 {
+.technologies .container .techno-image .techno-items .techno-item3 .techno-item .techno-item-line2 {
   position: absolute;
   border-bottom: solid 1px #ecc66b;
   width: 28px;
@@ -756,7 +762,7 @@ uncomment this part if you haven't added this code anywhere else
   margin-left: 308px;
   margin-top: 31px;
 }
-.technologies .container .techno-items .techno-item3 .techno-item .techno-item-cycle {
+.technologies .container .techno-image .techno-items .techno-item3 .techno-item .techno-item-cycle {
   margin-top: 10px;
   width: 30px;
   height: 30px;
@@ -766,7 +772,7 @@ uncomment this part if you haven't added this code anywhere else
   box-shadow: 0 0 25.5px 4.5px rgba(0, 0, 0, 0.004);
   margin-left: 323px;
 }
-.technologies .container .techno-items .techno-item3 .techno-item .techno-item-cycle .techno-item-ball {
+.technologies .container .techno-image .techno-items .techno-item3 .techno-item .techno-item-cycle .techno-item-ball {
   position: absolute;
   width: 17px;
   height: 17px;
@@ -775,29 +781,30 @@ uncomment this part if you haven't added this code anywhere else
   top: 23%;
   left: 23%;
 }
-.technologies .container .techno-items .techno-item3 .techno-item .techno-item-desc3 {
+.technologies .container .techno-image .techno-items .techno-item3 .techno-item .techno-item-desc3 {
   margin: 0;
+  width: 239px;
 }
-.technologies .container .techno-items .techno-item3 .techno-item .techno-item-desc3 .techno-item-text {
+.technologies .container .techno-image .techno-items .techno-item3 .techno-item .techno-item-desc3 .techno-item-text {
   max-width: 230px;
 }
-.technologies .container .techno-items .techno-item4 {
+.technologies .container .techno-image .techno-items .techno-item4 {
   position: absolute;
   top: 270px;
   left: 930px;
-  width: 170px;
+  width: 0;
 }
-.technologies .container .techno-items .techno-item4 .techno-item {
+.technologies .container .techno-image .techno-items .techno-item4 .techno-item {
   position: relative;
 }
-.technologies .container .techno-items .techno-item4 .techno-item .techno-item-line1 {
+.technologies .container .techno-image .techno-items .techno-item4 .techno-item .techno-item-line1 {
   position: absolute;
   border-bottom: solid 1px #ecc66b;
   width: 202px;
   margin-left: -210px;
   margin-top: 41px;
 }
-.technologies .container .techno-items .techno-item4 .techno-item .techno-item-line2 {
+.technologies .container .techno-image .techno-items .techno-item4 .techno-item .techno-item-line2 {
   position: absolute;
   border-bottom: solid 1px #ecc66b;
   width: 28px;
@@ -805,7 +812,7 @@ uncomment this part if you haven't added this code anywhere else
   margin-left: -234px;
   margin-top: 31px;
 }
-.technologies .container .techno-items .techno-item4 .techno-item .techno-item-cycle {
+.technologies .container .techno-image .techno-items .techno-item4 .techno-item .techno-item-cycle {
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -814,7 +821,7 @@ uncomment this part if you haven't added this code anywhere else
   box-shadow: 0 0 25.5px 4.5px rgba(0, 0, 0, 0.004);
   margin-left: -249px;
 }
-.technologies .container .techno-items .techno-item4 .techno-item .techno-item-cycle .techno-item-ball {
+.technologies .container .techno-image .techno-items .techno-item4 .techno-item .techno-item-cycle .techno-item-ball {
   position: absolute;
   width: 17px;
   height: 17px;
@@ -823,34 +830,35 @@ uncomment this part if you haven't added this code anywhere else
   top: 23%;
   left: 23%;
 }
-.technologies .container .techno-items .techno-item4 .techno-item .techno-item-desc4 {
+.technologies .container .techno-image .techno-items .techno-item4 .techno-item .techno-item-desc4 {
   margin: -1px 0 0 10px;
+  width: 239px;
 }
-.technologies .container .techno-items .techno-item4 .techno-item .techno-item-desc4 .item-header {
+.technologies .container .techno-image .techno-items .techno-item4 .techno-item .techno-item-desc4 .item-header {
   max-width: 190px;
   width: 190px;
 }
-.technologies .container .techno-items .techno-item4 .techno-item .techno-item-desc4 .techno-item-text {
+.technologies .container .techno-image .techno-items .techno-item4 .techno-item .techno-item-desc4 .techno-item-text {
   max-width: 234px;
   width: 234px;
 }
-.technologies .container .techno-items .techno-item5 {
+.technologies .container .techno-image .techno-items .techno-item5 {
   position: absolute;
   top: 457px;
   left: 650px;
-  width: 229px;
+  width: 0;
 }
-.technologies .container .techno-items .techno-item5 .techno-item {
+.technologies .container .techno-image .techno-items .techno-item5 .techno-item {
   position: relative;
 }
-.technologies .container .techno-items .techno-item5 .techno-item .techno-item-line1 {
+.technologies .container .techno-image .techno-items .techno-item5 .techno-item .techno-item-line1 {
   position: absolute;
   border-bottom: solid 1px #ecc66b;
   width: 80px;
   margin-left: -94px;
   margin-top: 44px;
 }
-.technologies .container .techno-items .techno-item5 .techno-item .techno-item-line2 {
+.technologies .container .techno-image .techno-items .techno-item5 .techno-item .techno-item-line2 {
   position: absolute;
   border-bottom: solid 1px #ecc66b;
   width: 28px;
@@ -858,7 +866,7 @@ uncomment this part if you haven't added this code anywhere else
   margin-left: -118px;
   margin-top: 34px;
 }
-.technologies .container .techno-items .techno-item5 .techno-item .techno-item-cycle {
+.technologies .container .techno-image .techno-items .techno-item5 .techno-item .techno-item-cycle {
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -868,7 +876,7 @@ uncomment this part if you haven't added this code anywhere else
   margin-left: -135px;
   margin-top: 16px;
 }
-.technologies .container .techno-items .techno-item5 .techno-item .techno-item-cycle .techno-item-ball {
+.technologies .container .techno-image .techno-items .techno-item5 .techno-item .techno-item-cycle .techno-item-ball {
   position: absolute;
   width: 17px;
   height: 17px;
@@ -877,18 +885,16 @@ uncomment this part if you haven't added this code anywhere else
   top: 23%;
   left: 23%;
 }
-.technologies .container .techno-items .techno-item5 .techno-item .techno-item-desc5 {
+.technologies .container .techno-image .techno-items .techno-item5 .techno-item .techno-item-desc5 {
   margin: 0;
+  width: 230px;
 }
-.technologies .container .techno-items .techno-item5 .techno-item .techno-item-desc5 .techno-item-text {
+.technologies .container .techno-image .techno-items .techno-item5 .techno-item .techno-item-desc5 .techno-item-text {
   max-width: 227px;
   width: 227px;
 }
 .technologies .container .techno-grid {
   display: none;
-}
-.six-steps {
-  background-color: #25252d;
 }
 .six-steps .container .steps-items {
   display: grid;
@@ -953,11 +959,7 @@ uncomment this part if you haven't added this code anywhere else
   max-width: 173px;
 }
 .built-houses {
-  background-color: #25252d;
   padding-bottom: 56px;
-}
-.built-houses .container {
-  background-color: #25252d;
 }
 .built-houses .container .card {
   position: relative;
@@ -1019,7 +1021,6 @@ uncomment this part if you haven't added this code anywhere else
   display: none;
 }
 .built-houses .container .card .slider .slick-dots button {
-  background-color: #25252d;
   border: 1px solid #ecc66b;
   border-radius: 50%;
   width: 8px;
@@ -1137,7 +1138,6 @@ uncomment this part if you haven't added this code anywhere else
 }
 .guarant {
   padding: 10px 0 0 0;
-  background-color: #25252d;
 }
 .guarant .guarant-title {
   display: flex;
@@ -1217,7 +1217,6 @@ uncomment this part if you haven't added this code anywhere else
   width: 340px;
 }
 .consult {
-  background-color: #25252d;
   padding-bottom: 60px;
 }
 .consult .container {
@@ -1286,8 +1285,9 @@ uncomment this part if you haven't added this code anywhere else
   padding-bottom: 2px;
   margin-top: -3px;
 }
-.excursion {
-  background-color: #25252d;
+.consult .container .consult-block2 .thank-you-consult {
+  padding-top: 80px;
+  padding-left: 115px;
 }
 .excursion .container {
   text-align: -webkit-center;
@@ -1332,6 +1332,10 @@ uncomment this part if you haven't added this code anywhere else
 .excursion .container .excursion-block .excursion-action .btn {
   width: 306px;
 }
+.excursion .container .thank-you-excur {
+  margin-top: -200px;
+  margin-bottom: 380px;
+}
 .excursion .container .order-contacts {
   display: none;
   width: 558px;
@@ -1351,6 +1355,9 @@ uncomment this part if you haven't added this code anywhere else
   width: 397px;
   height: 64px;
   padding: 48px 0 30px 0;
+}
+.excursion .container .order-contacts .consult-assent {
+  padding-left: 97px;
 }
 .excursion .container .order-contacts .order-contacts-cancel {
   position: absolute;
@@ -1413,7 +1420,6 @@ uncomment this part if you haven't added this code anywhere else
   margin-top: -3px;
 }
 .footer {
-  background-color: #25252d;
   padding: 50px 0 130px 0;
   border-top: 1px solid #363d51;
 }
@@ -1784,6 +1790,9 @@ uncomment this part if you haven't added this code anywhere else
   .consult .container .consult-block2 h2 {
     margin: 65px 0 41px 0;
   }
+  .excursion .container .order-contacts .consult-assent {
+    padding-left: 97px;
+  }
 }
 /* 1100 - 769 */
 @media screen and (max-width: 1100px) {
@@ -1872,57 +1881,65 @@ uncomment this part if you haven't added this code anywhere else
   .projects .container.container3 {
     flex-direction: column;
   }
-  .technologies .container .techno-items {
+  .technologies .container .techno-image .techno-items {
     display: block;
+    margin-left: 0;
+    padding-left: 0;
+    padding-top: 0;
   }
-  .technologies .container .techno-items .techno-item-line1,
-  .technologies .container .techno-items .techno-item-line2,
-  .technologies .container .techno-items .techno-item-desc {
+  .technologies .container .techno-image .techno-items .techno-item-line1,
+  .technologies .container .techno-image .techno-items .techno-item-line2,
+  .technologies .container .techno-image .techno-items .techno-item-desc {
     display: none;
   }
-  .technologies .container .techno-items .techno-item-line1 .item-header,
-  .technologies .container .techno-items .techno-item-line2 .item-header,
-  .technologies .container .techno-items .techno-item-desc .item-header,
-  .technologies .container .techno-items .techno-item-line1 .item-text,
-  .technologies .container .techno-items .techno-item-line2 .item-text,
-  .technologies .container .techno-items .techno-item-desc .item-text {
+  .technologies .container .techno-image .techno-items .techno-item-line1 .item-header,
+  .technologies .container .techno-image .techno-items .techno-item-line2 .item-header,
+  .technologies .container .techno-image .techno-items .techno-item-desc .item-header,
+  .technologies .container .techno-image .techno-items .techno-item-line1 .item-text,
+  .technologies .container .techno-image .techno-items .techno-item-line2 .item-text,
+  .technologies .container .techno-image .techno-items .techno-item-desc .item-text {
     display: none;
   }
-  .technologies .container .techno-items .techno-item1 .techno-item .techno-item-cycle {
+  .technologies .container .techno-image .techno-items .techno-item1 {
+    top: -161px;
+    left: -867px;
+  }
+  .technologies .container .techno-image .techno-items .techno-item1 .techno-item .techno-item-cycle {
     position: absolute;
-    margin-left: 201px;
   }
-  .technologies .container .techno-items .techno-item2 {
-    position: unset;
+  .technologies .container .techno-image .techno-items .techno-item2 {
+    position: absolute;
+    top: -126px;
+    left: 143px;
   }
-  .technologies .container .techno-items .techno-item2 .techno-item {
+  .technologies .container .techno-image .techno-items .techno-item2 .techno-item {
     position: relative;
   }
-  .technologies .container .techno-items .techno-item2 .techno-item .techno-item-cycle {
-    position: absolute;
-    margin-left: 590px;
-    margin-top: -375px;
+  .technologies .container .techno-image .techno-items .techno-item3 {
+    top: 51px;
+    left: -507px;
   }
-  .technologies .container .techno-items .techno-item3 .techno-item .techno-item-cycle {
-    margin-left: 170px;
+  .technologies .container .techno-image .techno-items .techno-item3 .techno-item .techno-item-cycle {
+    margin-top: 0;
+    margin-left: 0;
   }
-  .technologies .container .techno-items .techno-item4 {
-    left: 770px;
+  .technologies .container .techno-image .techno-items .techno-item4 {
+    left: -213px;
+    top: 0;
     width: 0;
   }
-  .technologies .container .techno-items .techno-item4 .techno-item .techno-item-cycle {
-    margin-left: -264px;
-    margin-top: 45px;
+  .technologies .container .techno-image .techno-items .techno-item4 .techno-item .techno-item-cycle {
+    margin-left: 0;
+    margin-top: 0;
   }
-  .technologies .container .techno-items .techno-item5 {
-    left: 420px;
+  .technologies .container .techno-image .techno-items .techno-item5 {
+    left: -368px;
+    top: 210px;
     width: 10px;
   }
-  .technologies .container .techno-items .techno-item5 .techno-item {
-    margin-left: 244px;
-  }
-  .technologies .container .techno-items .techno-item5 .techno-item .techno-item-cycle {
-    margin-left: -350px;
+  .technologies .container .techno-image .techno-items .techno-item5 .techno-item .techno-item-cycle5 {
+    margin-left: 0;
+    margin-top: 0;
   }
   .technologies .container .techno-grid {
     display: grid;
@@ -1944,6 +1961,9 @@ uncomment this part if you haven't added this code anywhere else
   }
   .consult {
     padding-bottom: calc(85px * 2);
+  }
+  .excursion .container .order-contacts .consult-assent {
+    padding-left: 97px;
   }
   .excursion .container .excursion-points img {
     background-size: cover;
@@ -1979,6 +1999,10 @@ uncomment this part if you haven't added this code anywhere else
   }
   .consult .container .consult-block1 .consult-gallery-items .consult-gallery-item img {
     max-width: 560px;
+  }
+  .excursion .container .order-contacts .consult-assent {
+    padding-left: 97px;
+    padding-top: 140px;
   }
 }
 /* 620 - 425 */
@@ -2266,88 +2290,83 @@ uncomment this part if you haven't added this code anywhere else
   .technologies {
     padding-bottom: 83px;
   }
+  .technologies .container .techno-image {
+    margin-bottom: 120px;
+  }
   .technologies .container .techno-image img {
     max-inline-size: 100%;
     block-size: auto;
   }
-  .technologies .container .techno-items .techno-item1 {
-    top: 88px;
-    left: -165px;
+  .technologies .container .techno-image .techno-items .techno-item1 {
+    top: -116px;
+    left: -821px;
   }
-  .technologies .container .techno-items .techno-item1 .techno-item .techno-item-cycle {
+  .technologies .container .techno-image .techno-items .techno-item1 .techno-item .techno-item-cycle {
     width: 23px;
     height: 23px;
   }
-  .technologies .container .techno-items .techno-item1 .techno-item .techno-item-cycle .techno-item-ball {
+  .technologies .container .techno-image .techno-items .techno-item1 .techno-item .techno-item-cycle .techno-item-ball {
     width: 15px;
     height: 15px;
     top: 18%;
     left: 18%;
   }
-  .technologies .container .techno-items .techno-item2 {
-    margin-left: 250px;
-    margin-top: 118px;
+  .technologies .container .techno-image .techno-items .techno-item2 {
+    top: -119px;
+    left: -88px;
   }
-  .technologies .container .techno-items .techno-item2 .techno-item {
+  .technologies .container .techno-image .techno-items .techno-item2 .techno-item {
     margin-left: 42px;
   }
-  .technologies .container .techno-items .techno-item2 .techno-item .techno-item-cycle {
+  .technologies .container .techno-image .techno-items .techno-item2 .techno-item .techno-item-cycle {
     margin-left: 0;
     width: 23px;
     height: 23px;
   }
-  .technologies .container .techno-items .techno-item2 .techno-item .techno-item-cycle .techno-item-ball {
+  .technologies .container .techno-image .techno-items .techno-item2 .techno-item .techno-item-cycle .techno-item-ball {
     width: 15px;
     height: 15px;
     top: 18%;
     left: 18%;
   }
-  .technologies .container .techno-items .techno-item3 {
-    margin-left: -12px;
-    margin-top: -110px;
+  .technologies .container .techno-image .techno-items .techno-item3 {
+    left: -434px;
   }
-  .technologies .container .techno-items .techno-item3 .techno-item {
-    margin-left: 42px;
-  }
-  .technologies .container .techno-items .techno-item3 .techno-item .techno-item-cycle {
+  .technologies .container .techno-image .techno-items .techno-item3 .techno-item .techno-item-cycle {
     margin-left: 0;
     width: 23px;
     height: 23px;
   }
-  .technologies .container .techno-items .techno-item3 .techno-item .techno-item-cycle .techno-item-ball {
+  .technologies .container .techno-image .techno-items .techno-item3 .techno-item .techno-item-cycle .techno-item-ball {
     width: 15px;
     height: 15px;
     top: 18%;
     left: 18%;
   }
-  .technologies .container .techno-items .techno-item4 {
-    margin-left: -35px;
-    margin-top: -113px;
-  }
-  .technologies .container .techno-items .techno-item4 .techno-item .techno-item-cycle {
+  .technologies .container .techno-image .techno-items .techno-item4 .techno-item .techno-item-cycle {
     margin-left: 0;
     width: 23px;
     height: 23px;
   }
-  .technologies .container .techno-items .techno-item4 .techno-item .techno-item-cycle .techno-item-ball {
+  .technologies .container .techno-image .techno-items .techno-item4 .techno-item .techno-item-cycle .techno-item-ball {
     width: 15px;
     height: 15px;
     top: 18%;
     left: 18%;
   }
-  .technologies .container .techno-items .techno-item5 {
-    left: 144px;
-    top: 289px;
+  .technologies .container .techno-image .techno-items .techno-item5 {
+    left: -361px;
+    top: 208px;
   }
-  .technologies .container .techno-items .techno-item5 .techno-item {
+  .technologies .container .techno-image .techno-items .techno-item5 .techno-item {
     margin-left: 237px;
   }
-  .technologies .container .techno-items .techno-item5 .techno-item .techno-item-cycle {
+  .technologies .container .techno-image .techno-items .techno-item5 .techno-item .techno-item-cycle {
     margin-left: -241px;
     width: 23px;
     height: 23px;
   }
-  .technologies .container .techno-items .techno-item5 .techno-item .techno-item-cycle .techno-item-ball {
+  .technologies .container .techno-image .techno-items .techno-item5 .techno-item .techno-item-cycle .techno-item-ball {
     width: 15px;
     height: 15px;
     top: 18%;
@@ -2443,11 +2462,21 @@ uncomment this part if you haven't added this code anywhere else
   .consult .container .consult-block1 .consult-gallery-items .consult-gallery-item img {
     display: none;
   }
+  .consult .container .consult-block2 .consult-advantages-items {
+    width: 330px;
+    display: contents;
+  }
   .consult .container .consult-block2 .consult-advantages-items .consult-assent {
-    padding-left: 15px;
+    padding-left: 145px;
   }
   .consult .container .consult-block2 .consult-advantages-items .consult-assent .consult-assent-text {
     width: 240px;
+  }
+  .consult .container .consult-block2 .thank-you-consult {
+    padding-left: 45px;
+  }
+  .excursion .container .excursion-points img {
+    display: none;
   }
   .excursion .container .excursion-block {
     width: 380px;
@@ -2460,8 +2489,16 @@ uncomment this part if you haven't added this code anywhere else
   .excursion .container .excursion-block .excursion-text {
     font-size: 14px;
   }
-  .excursion .container .excursion-points img {
-    display: none;
+  .excursion .container .thank-you-excur {
+    margin-top: 370px;
+    margin-bottom: 140px;
+  }
+  .excursion .container .order-contacts {
+    width: 445px;
+  }
+  .excursion .container .order-contacts .consult-assent {
+    padding-left: 80px;
+    padding-top: 360px;
   }
   .footer .container {
     flex-direction: column;
@@ -2630,6 +2667,29 @@ uncomment this part if you haven't added this code anywhere else
   .projects .container .modern-house-007 .project-block2 .project-action-download,
   .projects .container .modern-house-007 .project-block2 .project-action {
     padding-left: 45px;
+  }
+  .consult {
+    margin-bottom: 20px;
+  }
+  .consult .container .consult-block2 .consult-advantages-items .consult-assent {
+    padding-left: 45px;
+  }
+  .excursion .container .thank-you-excur {
+    padding-top: 200px;
+    margin-top: 80px;
+  }
+  .excursion .container .order-contacts {
+    width: 330px;
+  }
+  .excursion .container .order-contacts .order-text {
+    font-size: 14px;
+    width: 300px !important;
+  }
+  .excursion .container .order-contacts .consult-assent {
+    padding-left: 25px;
+  }
+  .excursion .container .order-contacts .order-contacts-cancel img {
+    width: 15px;
   }
 }
 /* 320 - 380 */
@@ -2975,93 +3035,96 @@ uncomment this part if you haven't added this code anywhere else
     font-size: 30px;
     width: 320px;
   }
-  .technologies .container .techno-items .techno-item1 {
-    left: -172px;
-    top: 63px;
+  .technologies .container .techno-image {
+    margin-bottom: 14px;
   }
-  .technologies .container .techno-items .techno-item1 .techno-item .techno-item-cycle {
+  .technologies .container .techno-image .techno-items .techno-item1 {
+    left: -654px;
+    top: -71px;
+  }
+  .technologies .container .techno-image .techno-items .techno-item1 .techno-item .techno-item-cycle {
     width: 23px;
     height: 23px;
   }
-  .technologies .container .techno-items .techno-item1 .techno-item .techno-item-cycle .techno-item-ball {
+  .technologies .container .techno-image .techno-items .techno-item1 .techno-item .techno-item-cycle .techno-item-ball {
     width: 15px;
     height: 15px;
     top: 18%;
     left: 18%;
   }
-  .technologies .container .techno-items .techno-item2 {
+  .technologies .container .techno-image .techno-items .techno-item2 {
     position: absolute;
-    margin-left: 10px;
-    left: 0;
+    left: -200px;
+    top: 52px;
   }
-  .technologies .container .techno-items .techno-item2 .techno-item {
+  .technologies .container .techno-image .techno-items .techno-item2 .techno-item {
     margin-left: 0;
     margin-top: -120px;
   }
-  .technologies .container .techno-items .techno-item2 .techno-item .techno-item-cycle {
+  .technologies .container .techno-image .techno-items .techno-item2 .techno-item .techno-item-cycle {
     margin-left: 210px;
     margin-top: -50px;
     width: 23px;
     height: 23px;
   }
-  .technologies .container .techno-items .techno-item2 .techno-item .techno-item-cycle .techno-item-ball {
+  .technologies .container .techno-image .techno-items .techno-item2 .techno-item .techno-item-cycle .techno-item-ball {
     width: 15px;
     height: 15px;
     top: 18%;
     left: 18%;
   }
-  .technologies .container .techno-items .techno-item3 {
-    top: 145px;
-    left: 30px;
+  .technologies .container .techno-image .techno-items .techno-item3 {
+    top: -104px;
+    left: -235px;
   }
-  .technologies .container .techno-items .techno-item3 .techno-item {
+  .technologies .container .techno-image .techno-items .techno-item3 .techno-item {
     margin-top: 120px;
   }
-  .technologies .container .techno-items .techno-item3 .techno-item .techno-item-cycle {
+  .technologies .container .techno-image .techno-items .techno-item3 .techno-item .techno-item-cycle {
     width: 23px;
     height: 23px;
   }
-  .technologies .container .techno-items .techno-item3 .techno-item .techno-item-cycle .techno-item-ball {
+  .technologies .container .techno-image .techno-items .techno-item3 .techno-item .techno-item-cycle .techno-item-ball {
     width: 15px;
     height: 15px;
     top: 18%;
     left: 18%;
   }
-  .technologies .container .techno-items .techno-item4 {
-    left: 194px;
-    top: 150px;
+  .technologies .container .techno-image .techno-items .techno-item4 {
+    left: -156px;
+    top: -115px;
   }
-  .technologies .container .techno-items .techno-item4 .techno-item {
+  .technologies .container .techno-image .techno-items .techno-item4 .techno-item {
     margin-top: 112px;
     margin-left: 39px;
   }
-  .technologies .container .techno-items .techno-item4 .techno-item .techno-item-cycle {
+  .technologies .container .techno-image .techno-items .techno-item4 .techno-item .techno-item-cycle {
     margin-left: 0;
     margin-top: 0;
     width: 23px;
     height: 23px;
   }
-  .technologies .container .techno-items .techno-item4 .techno-item .techno-item-cycle .techno-item-ball {
+  .technologies .container .techno-image .techno-items .techno-item4 .techno-item .techno-item-cycle .techno-item-ball {
     width: 15px;
     height: 15px;
     top: 18%;
     left: 18%;
   }
-  .technologies .container .techno-items .techno-item5 {
-    top: 230px;
-    left: 107px;
+  .technologies .container .techno-image .techno-items .techno-item5 {
+    top: 100px;
+    left: -183px;
     width: 100px;
   }
-  .technologies .container .techno-items .techno-item5 .techno-item {
+  .technologies .container .techno-image .techno-items .techno-item5 .techno-item {
     margin-left: 0;
   }
-  .technologies .container .techno-items .techno-item5 .techno-item .techno-item-cycle {
+  .technologies .container .techno-image .techno-items .techno-item5 .techno-item .techno-item-cycle {
     margin-left: 0;
     margin-top: 0;
     width: 23px;
     height: 23px;
   }
-  .technologies .container .techno-items .techno-item5 .techno-item .techno-item-cycle .techno-item-ball {
+  .technologies .container .techno-image .techno-items .techno-item5 .techno-item .techno-item-cycle .techno-item-ball {
     width: 15px;
     height: 15px;
     top: 18%;
@@ -3118,7 +3181,7 @@ uncomment this part if you haven't added this code anywhere else
     font-family: MuseoSansCyrl700, sans-serif;
   }
   .six-steps .container .steps-items .steps-item .steps-item-desc-02 {
-    width: 215px;
+    width: 210px;
   }
   .built-houses {
     padding-bottom: 35px;
@@ -3218,6 +3281,9 @@ uncomment this part if you haven't added this code anywhere else
     max-width: 270px;
     margin: auto;
   }
+  .thank-you .thank-you-text {
+    width: 300px;
+  }
   .consult {
     padding-bottom: 550px;
   }
@@ -3240,14 +3306,14 @@ uncomment this part if you haven't added this code anywhere else
   .consult .container .consult-block2 .consult-advantages-items .consult-assent .consult-assent-box img {
     margin-top: -3px;
   }
-  .consult .container .consult-block2 .thank-you .thank-you-text {
-    width: 305px;
+  .consult .container .consult-block2 .thank-you-consult {
+    padding-left: 0;
   }
   .excursion .container {
     position: relative;
   }
   .excursion .container .excursion-image {
-    position: absolute;
+    margin-top: -450px;
   }
   .excursion .container .excursion-image img {
     margin-top: -41px;
@@ -3262,6 +3328,7 @@ uncomment this part if you haven't added this code anywhere else
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 250px;
   }
   .excursion .container .excursion-block .excursion-header {
     font-size: 30px;
@@ -3281,6 +3348,10 @@ uncomment this part if you haven't added this code anywhere else
     z-index: 100;
     position: relative;
     padding-bottom: 90px;
+  }
+  .excursion .container .excursion-block .thank-you-text {
+    padding-top: 300px;
+    display: block;
   }
   .footer {
     padding-bottom: 80px;

@@ -151,8 +151,8 @@ $(document).ready(function () {
   });
 
 //Блок 3 Технологии строительства
-  if (window.visualViewport.width > 620) {
-    console.log("visualViewport.width > 620");
+  if (window.visualViewport.width > 380) {
+    console.log("visualViewport.width > 380");
     
     let guarantTitleTwo = $('.guarant-title-two');
     guarantTitleTwo.css('display', 'none');
@@ -164,16 +164,32 @@ $(document).ready(function () {
     let technoGridItemHeader1 = $('.techno-grid-item-header1');
     let technoGridItemText1 = $('.techno-grid-item-text1');
     
+    document.addEventListener('click', (e) => {
+      console.log(e.target)
+    })
+    
     let technoItemCycle1 = $('.techno-item-cycle1');
     // console.log("technoItemCycle1=" + technoItemCycle1);
     technoItemCycle1.on('click', function () {
       console.log("technoItemCycle1= click");
+      let technoItemHeader1 = $('.techno-item-desc1 .item-header');
+      technoItemHeader1 = technoItemHeader1.html();
+      technoGridItemHeader1.html(technoItemHeader1);
+      let technoItemText1 = $('.techno-item-desc1 .item-text');
+      technoItemText1 = technoItemText1.html();
+      technoGridItemText1.html(technoItemText1);
     });
     
     let technoItemCycle2 = $('.techno-item-cycle2');
     // console.log("technoItemCycle1=" + technoItemCycle1);
     technoItemCycle2.on('click', function () {
       console.log("technoItemCycle2= click");
+      let technoItemHeader2 = $('.techno-item-desc2 .item-header');
+      technoItemHeader2 = technoItemHeader2.html();
+      technoGridItemHeader1.html(technoItemHeader2);
+      let technoItemText2 = $('.techno-item-desc2 .item-text');
+      technoItemText2 = technoItemText2.html();
+      technoGridItemText1.html(technoItemText2);
     });
     
     let technoItemCycle3 = $('.techno-item-cycle3');
@@ -184,7 +200,7 @@ $(document).ready(function () {
       // поиск в 3-м блоке заголовка
       let technoItemHeader3 = $('.techno-item-desc3 .item-header');
       // console.log("techno-item-desc3= " + technoItemHeader3.html());
-      technoItemHeader3= technoItemHeader3.html();
+      technoItemHeader3 = technoItemHeader3.html();
       // console.log("techno-item-header3= " + technoItemHeader3);
       
       // console.log("начальное значение: techno-item-header1= " + technoItemHeader1.html());
@@ -193,7 +209,7 @@ $(document).ready(function () {
       
       // поиск в 3-м блоке содержания
       let technoItemText3 = $('.techno-item-desc3 .item-text');
-      technoItemText3= technoItemText3.html();
+      technoItemText3 = technoItemText3.html();
       // console.log("techno-item-text3= " + technoItemText3);
       technoGridItemText1.html(technoItemText3);
       // console.log("новое значение: techno-grid-item-text1= " + technoGridItemText1.html());
@@ -204,10 +220,10 @@ $(document).ready(function () {
     technoItemCycle4.on('click', function () {
       console.log("technoItemCycle4= click");
       let technoItemHeader4 = $('.techno-item-desc4 .item-header');
-      technoItemHeader4= technoItemHeader4.html();
+      technoItemHeader4 = technoItemHeader4.html();
       technoGridItemHeader1.html(technoItemHeader4);
       let technoItemText4 = $('.techno-item-desc4 .item-text');
-      technoItemText4= technoItemText4.html();
+      technoItemText4 = technoItemText4.html();
       technoGridItemText1.html(technoItemText4);
     });
     
@@ -216,15 +232,15 @@ $(document).ready(function () {
     technoItemCycle5.on('click', function () {
       console.log("technoItemCycle5= click");
       let technoItemHeader5 = $('.techno-item-desc5 .item-header');
-      technoItemHeader5= technoItemHeader5.html();
+      technoItemHeader5 = technoItemHeader5.html();
       technoGridItemHeader1.html(technoItemHeader5);
       let technoItemText5 = $('.techno-item-desc5 .item-text');
-      technoItemText5= technoItemText5.html();
+      technoItemText5 = technoItemText5.html();
       technoGridItemText1.html(technoItemText5);
     });
   }
 
-  
+
 //Блок 5 Построили более 200 домов за 10 лет
   $(".slider").slick({
     slidesToShow: 3,
@@ -323,8 +339,9 @@ $(document).ready(function () {
   
   let showConsultAdvantagesItems = $(".consult-advantages-items");
   let orderSubmitConsult = $('#btn-signup-consult');
-  let showThank = $('.thank-you');
-  let showThankConsult = $('.tank-you.tank-you-consult');
+  let showThank = $('.tank-you-consult');
+  // let showThankConsult = $('.tank-you.tank-you-consult');
+  let showThankConsult = $('#thankYouConsult');
   let showThankConsultText = $('.tank-you-text');
   orderSubmitConsult.on('click', function () {
     let name = $('#inputNameConsult');
@@ -386,13 +403,12 @@ $(document).ready(function () {
             // showThankConsult.css('display', 'block');
             // showThank.css('margin', '120px');
           }
-          showThank.css('display', 'block');
+          showThankConsult.css('display', 'block');
         });
     }
   });
 
 //Блок 8 Запишитесь на экскурсию
-// Записаться на экскурсию
   let orderSubmit = $("#btn-signup");
   let showOrderExcur = $(".order-contacts");
   let showExcursionBlock = $('.excursion-block');
@@ -400,6 +416,7 @@ $(document).ready(function () {
   let showExcursionText = $('.excursion-text');
   let showExcursionAction = $('.excursion-action');
   let showThankExcur = $('#thankYouExcur');
+  let consult = $('.consult');
   orderSubmit.on('click', function () {
     let orderText = $('.order-text');
     let consultAssent = $('.consult-assent');
@@ -410,18 +427,20 @@ $(document).ready(function () {
     
     showExcursionBlock.css('display', 'none');
     showOrderExcur.css('margin-left', '-16px');
-    showOrderExcur.css('width', '330px');
+    // if (window.visualViewport.width < 425) {
+      // showOrderExcur.css('width', '330px');
+      // consultAssent.css('padding-left', '135px');
+    // } else {
+      // showOrderExcur.css('width', '557px');
+      // consultAssent.css('padding-left', '135px');
+    // }
     orderText.css('width', '310px');
     consultAssent.css('width', '280px');
-    consultAssent.css('padding-left', '20px');
-
+    
   });
   
   let orderSubmitPopup = $('#btn-signup-popup');
   orderSubmitPopup.on('click', function () {
-
-    
-    
     let name = $('#inputName');
     let phone = $('#inputPhone');
     const ORDER_BORDER_COLOR = 'rgb(255, 255, 255)';
@@ -453,6 +472,7 @@ $(document).ready(function () {
     // с данными из полей: Имя (name), Телефон (phone).
     if (!hasError) {
       // alert('Спасибо за заказ!');
+      console.log('Спасибо за заказ!');
       showOrderExcur.css('display', 'none');
       showExcursionBlock.css('padding-bottom', '330px');
       showExcursionHeader.css('display', 'none');
@@ -476,8 +496,15 @@ $(document).ready(function () {
             showThank.css('font-size', '22px');
             showThank.css('color', '#FFF');
           }
-          showThank.css('padding-top', '95px');
+          // showThank.css('padding-top', '95px');
+          showThank.css('padding-top', '0');
           showThankExcur.css('display', 'block');
+          if (window.visualViewport.width < 425) {
+            showThankExcur.css('padding-top', '300px');
+            consult.css('padding-bottom', '500px');
+          } else {
+            // consult.css('padding-bottom', '0');
+          }
         });
     }
   });
@@ -487,6 +514,11 @@ $(document).ready(function () {
   showCancel.on('click', function () {
     // console.log('showCancel= click' + showCancel);
     showOrderExcur.css('display', 'none');
+    showExcursionBlock.css('display', 'block');
+    showExcursionHeader.css('display', 'block');
+    showExcursionText.css('display', 'block');
+    showExcursionAction.css('display', 'block');
+    
   });
   
 })

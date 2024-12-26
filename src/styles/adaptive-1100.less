@@ -151,92 +151,102 @@
   //Блок 3 Технологии строительства
   .technologies {
     .container {
+      .techno-image {
+        .techno-items {
+          display: block;
+          margin-left: 0;
+          padding-left: 0;
+          padding-top: 0;
 
-      .techno-items {
-        display: block;
-
-        .techno-item-line1, .techno-item-line2, .techno-item-desc {
-          display: none;
-
-          .item-header, .item-text {
+          .techno-item-line1, .techno-item-line2, .techno-item-desc {
             display: none;
+
+            .item-header, .item-text {
+              display: none;
+            }
           }
-        }
 
-        .techno-item1 {
-          .techno-item {
-            .techno-item-cycle {
-              position: absolute;
-              margin-left: 201px;
+          .techno-item1 {
+            top: -161px;
+            left: -867px;
 
-              .techno-item-ball {
+            .techno-item {
+              .techno-item-cycle {
+                position: absolute;
                 //margin-left: 201px;
+
+                .techno-item-ball {
+                  //margin-left: 201px;
+                }
               }
             }
           }
-        }
 
-        .techno-item2 {
-          position: unset;
-          //width: 0;
-          .techno-item {
-            //display: none;
+          .techno-item2 {
+            position: absolute;
+            top: -126px;
+            left: 143px;
             //width: 0;
-            position: relative;
+            .techno-item {
+              //display: none;
+              //width: 0;
+              position: relative;
 
-            .techno-item-cycle {
-              position: absolute;
-              margin-left: 590px;
-              margin-top: -375px;
+              .techno-item-cycle {
+                //position: absolute;
+                //margin-left: 590px;
+                //margin-top: -375px;
+              }
             }
           }
 
-          //.techno-item-adaptive {
-          //  display: block;
-          //
-          //  .techno-item-cycle {
-          //    display: block;
-          //    .mix-techno-item-cycle(-192px);
-          //
-          //    .techno-item-ball {
-          //      .mix-techno-item-ball();
-          //    }
-          //  }
-          //}
-        }
+          .techno-item3 {
+            top: 51px;
+            left: -507px;
 
-        .techno-item3 {
-          .techno-item {
-            .techno-item-cycle {
-              margin-left: 170px;
+            .techno-item {
+              .techno-item-cycle {
+                margin-top: 0;
+                margin-left: 0;
+              }
+
+              .techno-item-cycle3 {
+                //margin-left: 170px;
+              }
             }
           }
-        }
 
-        .techno-item4 {
-          left: 770px;
-          width: 0;
+          .techno-item4 {
+            left: -213px;
+            top: 0;
+            width: 0;
 
-          .techno-item {
-            .techno-item-cycle {
-              margin-left: -264px;
-              margin-top: 45px;
+            .techno-item {
+              .techno-item-cycle {
+                margin-left: 0;
+                margin-top: 0;
+              }
             }
           }
-        }
 
-        .techno-item5 {
-          left: 420px;
-          width: 10px;
-          .techno-item {
-            margin-left: 244px;
-            .techno-item-cycle {
-              margin-left: -350px;
+          .techno-item5 {
+            left: -368px;
+            top: 210px;
+            width: 10px;
+
+            .techno-item {
+              //margin-left: 244px;
+
+              .techno-item-cycle5 {
+                margin-left: 0;
+                margin-top: 0;
+                //margin-left: -350px;
+              }
             }
           }
+
+
         }
-
-
       }
 
       .techno-grid {
@@ -285,6 +295,12 @@
   //Блок 8 Запишитесь на экскурсию
   .excursion {
     .container {
+      .order-contacts {
+        .consult-assent {
+          padding-left: 97px;
+        }
+      }
+
       .excursion-points {
         img {
           background-size: cover;

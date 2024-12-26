@@ -33,6 +33,10 @@
   src: url("../../fonts/Neumann.ttf");
 }
 
+body {
+  background-color: #25252d;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -596,7 +600,7 @@ uncomment this part if you haven't added this code anywhere else
 //Блок 2 Наши проекты
 .projects {
   padding: 102px 0 0 0;
-  background-color: #25252d;
+  //background-color: #25252d;
 
   h2 {
     padding-bottom: 70px;
@@ -905,7 +909,7 @@ uncomment this part if you haven't added this code anywhere else
 
 //Блок 3 Технологии строительства
 .technologies {
-  background-color: #25252d;
+  //background-color: #25252d;
   padding-bottom: 224px;
 
   .title {
@@ -913,20 +917,23 @@ uncomment this part if you haven't added this code anywhere else
   }
 
   .container {
-    position: relative;
 
     .techno-image {
       display: flex;
       align-items: center;
       justify-content: center;
-    }
 
     .techno-items {
+      position: relative;
+      margin-left: -882px;
+      padding-left: 883px;
+      padding-top: 534px;
+
       .techno-item1 {
         position: absolute;
         top: 91px;
         left: 12px;
-        width: 268px;
+        width: 0;
 
         .techno-item {
           .techno-item-line1 {
@@ -953,6 +960,7 @@ uncomment this part if you haven't added this code anywhere else
 
           .techno-item-desc {
             display: inline-block;
+            width: 270px;
 
             .techno-item-text {
               font-size: 16px;
@@ -978,7 +986,7 @@ uncomment this part if you haven't added this code anywhere else
         position: absolute;
         top: 120px;
         left: 970px;
-        width: 270px;
+        width: 0;
 
         //.techno-item-adaptive{
         //  display: none;
@@ -1015,6 +1023,7 @@ uncomment this part if you haven't added this code anywhere else
           //
           .techno-item-desc2 {
             margin: -53px 0 0 -13px;
+            width: 270px;
           }
         }
       }
@@ -1023,7 +1032,7 @@ uncomment this part if you haven't added this code anywhere else
         position: absolute;
         top: 302px;
         left: 57px;
-        width: 238px;
+        width: 0;
 
         .techno-item {
           position: relative;
@@ -1060,6 +1069,7 @@ uncomment this part if you haven't added this code anywhere else
 
           .techno-item-desc3 {
             margin: 0;
+            width: 239px;
 
             .techno-item-text {
               max-width: 230px;
@@ -1072,7 +1082,7 @@ uncomment this part if you haven't added this code anywhere else
         position: absolute;
         top: 270px;
         left: 930px;
-        width: 170px;
+        width: 0;
 
         .techno-item {
           position: relative;
@@ -1109,6 +1119,7 @@ uncomment this part if you haven't added this code anywhere else
 
           .techno-item-desc4 {
             margin: -1px 0 0 10px;
+            width: 239px;
 
             .item-header {
               max-width: 190px;
@@ -1127,7 +1138,7 @@ uncomment this part if you haven't added this code anywhere else
         position: absolute;
         top: 457px;
         left: 650px;
-        width: 229px;
+        width: 0;
 
         .techno-item {
           position: relative;
@@ -1170,6 +1181,7 @@ uncomment this part if you haven't added this code anywhere else
 
           .techno-item-desc5 {
             margin: 0;
+            width: 230px;
 
             .techno-item-text {
               max-width: 227px;
@@ -1180,6 +1192,8 @@ uncomment this part if you haven't added this code anywhere else
       }
     }
 
+  }
+
     .techno-grid {
       display: none;
     }
@@ -1189,7 +1203,7 @@ uncomment this part if you haven't added this code anywhere else
 
 //Блок 4 6 шагов к вашему новому дому
 .six-steps {
-  background-color: #25252d;
+  //background-color: #25252d;
 
   .container {
     &.container-six-steps {
@@ -1288,12 +1302,12 @@ uncomment this part if you haven't added this code anywhere else
 
 //Блок 5 Построили более 200 домов за 10 лет
 .built-houses {
-  background-color: #25252d;
+  //background-color: #25252d;
   padding-bottom: 56px;
 
   .container {
     //background-color: rgba(227, 164, 164, 0.76);
-    background-color: #25252d;
+    //background-color: #25252d;
     //position: relative;
 
 
@@ -1362,8 +1376,9 @@ uncomment this part if you haven't added this code anywhere else
             //opacity: 0.4;
             .item-inner-desc {
               justify-content: space-around;
-              .item-inner-text{
-                .item-inner-text12{
+
+              .item-inner-text {
+                .item-inner-text12 {
                   display: none;
                 }
               }
@@ -1373,7 +1388,7 @@ uncomment this part if you haven't added this code anywhere else
 
         .slick-dots {
           button {
-            background-color: #25252d;
+            //background-color: #25252d;
             border: 1px solid #ecc66b;
             border-radius: 50%;
             width: 8px;
@@ -1571,7 +1586,7 @@ uncomment this part if you haven't added this code anywhere else
 //Блок 6 Гарантии и условия оплаты
 .guarant {
   padding: 10px 0 0 0;
-  background-color: #25252d;
+  //background-color: #25252d;
 
   .guarant-title {
     display: flex;
@@ -1672,6 +1687,10 @@ uncomment this part if you haven't added this code anywhere else
 
 .thank-you {
   display: none;
+  //padding-top: 80px;
+  //padding-left: 115px;
+  //margin-bottom: 370px;
+  //margin-top: -200px;
 
   .thank-you-text {
     font-size: 22px;
@@ -1685,7 +1704,7 @@ uncomment this part if you haven't added this code anywhere else
 
 //Блок 7 Получите индивидуальную консультацию
 .consult {
-  background-color: #25252d;
+  //background-color: #25252d;
   padding-bottom: 60px;
   //padding-bottom: calc(65px * 4);
 
@@ -1802,6 +1821,12 @@ uncomment this part if you haven't added this code anywhere else
 
         }
       }
+
+      .thank-you-consult {
+        padding-top: 80px;
+        padding-left: 115px;
+      }
+
     }
   }
 }
@@ -1809,7 +1834,7 @@ uncomment this part if you haven't added this code anywhere else
 //Блок 8 Запишитесь на экскурсию
 .excursion {
   //padding-top: 100px;
-  background-color: #25252d;
+  //background-color: #25252d;
 
   .container {
     text-align: -webkit-center;
@@ -1870,6 +1895,11 @@ uncomment this part if you haven't added this code anywhere else
 
     }
 
+    .thank-you-excur {
+      margin-top: -200px;
+      margin-bottom: 380px;
+    }
+
     .order-contacts {
       display: none;
       width: 558px;
@@ -1890,6 +1920,10 @@ uncomment this part if you haven't added this code anywhere else
         width: 397px;
         height: 64px;
         padding: 48px 0 30px 0;
+      }
+
+      .consult-assent {
+        padding-left: 97px;
       }
 
       .order-contacts-cancel {
@@ -1962,7 +1996,7 @@ uncomment this part if you haven't added this code anywhere else
 }
 
 .footer {
-  background-color: #25252d;
+  //background-color: #25252d;
   padding: 50px 0 130px 0;
   border-top: 1px solid #363d51;
 

@@ -428,11 +428,11 @@ $(document).ready(function () {
     showExcursionBlock.css('display', 'none');
     showOrderExcur.css('margin-left', '-16px');
     // if (window.visualViewport.width < 425) {
-      // showOrderExcur.css('width', '330px');
-      // consultAssent.css('padding-left', '135px');
+    // showOrderExcur.css('width', '330px');
+    // consultAssent.css('padding-left', '135px');
     // } else {
-      // showOrderExcur.css('width', '557px');
-      // consultAssent.css('padding-left', '135px');
+    // showOrderExcur.css('width', '557px');
+    // consultAssent.css('padding-left', '135px');
     // }
     orderText.css('width', '310px');
     consultAssent.css('width', '280px');
@@ -596,5 +596,3 @@ $(document).ready(function () {
 //     container3.css('display', 'block');
 //   }
 // })
-
-

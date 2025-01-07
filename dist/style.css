@@ -2294,14 +2294,14 @@ uncomment this part if you haven't added this code anywhere else
     margin-bottom: 120px;
   }
   .technologies .container .techno-image img {
-    max-inline-size: 100%;
-    block-size: auto;
+    max-width: 375px;
   }
   .technologies .container .techno-image .techno-items .techno-item1 {
-    top: -116px;
-    left: -821px;
+    top: -86px;
+    left: -336px;
   }
   .technologies .container .techno-image .techno-items .techno-item1 .techno-item .techno-item-cycle {
+    margin-left: 0;
     width: 23px;
     height: 23px;
   }
@@ -2312,8 +2312,8 @@ uncomment this part if you haven't added this code anywhere else
     left: 18%;
   }
   .technologies .container .techno-image .techno-items .techno-item2 {
-    top: -119px;
-    left: -88px;
+    top: -84px;
+    left: -69px;
   }
   .technologies .container .techno-image .techno-items .techno-item2 .techno-item {
     margin-left: 42px;
@@ -2330,7 +2330,8 @@ uncomment this part if you haven't added this code anywhere else
     left: 18%;
   }
   .technologies .container .techno-image .techno-items .techno-item3 {
-    left: -434px;
+    left: -288px;
+    top: 32px;
   }
   .technologies .container .techno-image .techno-items .techno-item3 .techno-item .techno-item-cycle {
     margin-left: 0;
@@ -2342,6 +2343,10 @@ uncomment this part if you haven't added this code anywhere else
     height: 15px;
     top: 18%;
     left: 18%;
+  }
+  .technologies .container .techno-image .techno-items .techno-item4 {
+    left: -115px;
+    top: 29px;
   }
   .technologies .container .techno-image .techno-items .techno-item4 .techno-item .techno-item-cycle {
     margin-left: 0;
@@ -2355,14 +2360,11 @@ uncomment this part if you haven't added this code anywhere else
     left: 18%;
   }
   .technologies .container .techno-image .techno-items .techno-item5 {
-    left: -361px;
-    top: 208px;
-  }
-  .technologies .container .techno-image .techno-items .techno-item5 .techno-item {
-    margin-left: 237px;
+    left: -234px;
+    top: 129px;
   }
   .technologies .container .techno-image .techno-items .techno-item5 .techno-item .techno-item-cycle {
-    margin-left: -241px;
+    margin-left: 0;
     width: 23px;
     height: 23px;
   }
@@ -3038,9 +3040,12 @@ uncomment this part if you haven't added this code anywhere else
   .technologies .container .techno-image {
     margin-bottom: 14px;
   }
+  .technologies .container .techno-image img {
+    max-width: 290px;
+  }
   .technologies .container .techno-image .techno-items .techno-item1 {
-    left: -654px;
-    top: -71px;
+    left: -262px;
+    top: -68px;
   }
   .technologies .container .techno-image .techno-items .techno-item1 .techno-item .techno-item-cycle {
     width: 23px;
@@ -3054,8 +3059,8 @@ uncomment this part if you haven't added this code anywhere else
   }
   .technologies .container .techno-image .techno-items .techno-item2 {
     position: absolute;
-    left: -200px;
-    top: 52px;
+    left: -219px;
+    top: 56px;
   }
   .technologies .container .techno-image .techno-items .techno-item2 .techno-item {
     margin-left: 0;
@@ -3074,8 +3079,8 @@ uncomment this part if you haven't added this code anywhere else
     left: 18%;
   }
   .technologies .container .techno-image .techno-items .techno-item3 {
-    top: -104px;
-    left: -235px;
+    top: -98px;
+    left: -226px;
   }
   .technologies .container .techno-image .techno-items .techno-item3 .techno-item {
     margin-top: 120px;
@@ -3091,8 +3096,8 @@ uncomment this part if you haven't added this code anywhere else
     left: 18%;
   }
   .technologies .container .techno-image .techno-items .techno-item4 {
-    left: -156px;
-    top: -115px;
+    left: -133px;
+    top: -92px;
   }
   .technologies .container .techno-image .techno-items .techno-item4 .techno-item {
     margin-top: 112px;
@@ -3111,7 +3116,7 @@ uncomment this part if you haven't added this code anywhere else
     left: 18%;
   }
   .technologies .container .techno-image .techno-items .techno-item5 {
-    top: 100px;
+    top: 97px;
     left: -183px;
     width: 100px;
   }
